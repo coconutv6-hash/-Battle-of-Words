@@ -20,6 +20,7 @@ class GameController extends ChangeNotifier {
   bool get hasWinner => winner != null;
 
   Timer? _ticker;
+  Timer? _nextRoundDelay;
 
   Future<void> loadWordBank() async {
     if (_wordBank.isNotEmpty) return;
@@ -66,6 +67,7 @@ class GameController extends ChangeNotifier {
   }
 
   void _startRound({bool swapRoles = false}) {
+    _nextRoundDelay?.cancel();
     if (swapRoles) {
       _swapRoles();
     }
@@ -115,7 +117,7 @@ class GameController extends ChangeNotifier {
     final activeResponder = responder;
     if (activeResponder == null) return;
     activeResponder.points += 1;
-    currentRound!.wasCorrect = true;
+    currentRound!..wasCorrect = true..correctSpelling = null;
     notifyListeners();
     _startRound(swapRoles: true);
   }
@@ -123,16 +125,24 @@ class GameController extends ChangeNotifier {
   void _handleMiss({bool isTimeout = false}) {
     _ticker?.cancel();
     final activeResponder = responder;
-    if (activeResponder == null) return;
+    final round = currentRound;
+    if (activeResponder == null || round == null) return;
     activeResponder.lives -= 1;
-    currentRound?.wasCorrect = false;
+    round
+      ..wasCorrect = false
+      ..correctSpelling = round.wordPair.en;
     notifyListeners();
     if (!activeResponder.isAlive) {
       winner = speaker;
       notifyListeners();
       return;
     }
-    _startRound();
+    _nextRoundDelay?.cancel();
+    _nextRoundDelay = Timer(const Duration(seconds: 2), () {
+      if (currentRound == round && winner == null) {
+        _startRound();
+      }
+    });
   }
 
   void rematch() {
@@ -141,6 +151,7 @@ class GameController extends ChangeNotifier {
 
   void reset() {
     _ticker?.cancel();
+    _nextRoundDelay?.cancel();
     host = null;
     guest = null;
     currentRound = null;
@@ -151,6 +162,7 @@ class GameController extends ChangeNotifier {
   @override
   void dispose() {
     _ticker?.cancel();
+    _nextRoundDelay?.cancel();
     super.dispose();
   }
 

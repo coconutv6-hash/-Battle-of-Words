@@ -139,6 +139,7 @@ class _RoundScreenState extends State<RoundScreen> {
 
   Widget _responderCard(BuildContext context, round, GameController controller, ThemeData theme) {
     final translation = round?.wordPair.pl ?? '—';
+    final correction = round?.correctSpelling;
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(24),
@@ -152,6 +153,32 @@ class _RoundScreenState extends State<RoundScreen> {
               style: theme.textTheme.headlineMedium,
             ),
             const SizedBox(height: 16),
+            if (correction != null) ...[
+              Center(
+                child: Container(
+                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
+                  decoration: BoxDecoration(
+                    color: Colors.black.withOpacity(0.05),
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(color: theme.colorScheme.error),
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Poprawna pisownia',
+                        style: theme.textTheme.titleMedium?.copyWith(color: theme.colorScheme.error),
+                      ),
+                      const SizedBox(height: 8),
+                      Text(
+                        correction,
+                        style: theme.textTheme.displaySmall?.copyWith(fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 16),
+            ],
             TextField(
               controller: _answerController,
               decoration: InputDecoration(

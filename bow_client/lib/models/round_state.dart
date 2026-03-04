@@ -7,6 +7,7 @@ class RoundState {
   final DateTime deadline;
   String responderInput = '';
   bool? wasCorrect;
+  String? correctSpelling;
 
   Duration get remaining => deadline.difference(DateTime.now());
 }
