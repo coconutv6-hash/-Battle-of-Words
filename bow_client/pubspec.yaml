@@ -1,0 +1,23 @@
+name: bow_client
+version: 0.1.0
+publish_to: none
+description: Local MVP of Bow vocabulary duel (Flutter).
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.1.2
+  google_fonts: ^6.1.0
+
+dev_dependencies:
+  flutter_lints: ^4.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/data/words.json

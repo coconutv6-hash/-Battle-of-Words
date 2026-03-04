@@ -1,0 +1,1 @@
+enum PlayerRole { speaker, responder }
