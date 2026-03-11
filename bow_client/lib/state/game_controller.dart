@@ -28,7 +28,8 @@ class GameController extends ChangeNotifier {
   Future<void> loadWordBank() async {
     if (_wordBank.isNotEmpty) return;
     try {
-      final raw = await rootBundle.loadString('assets/words.json');
+      final byteData = await rootBundle.load('assets/words.json');
+      final raw = utf8.decode(byteData.buffer.asUint8List());
       final List<dynamic> decoded = jsonDecode(raw) as List<dynamic>;
       _wordBank
         ..clear()
