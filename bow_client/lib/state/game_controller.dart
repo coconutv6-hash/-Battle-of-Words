@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart' show rootBundle;
@@ -11,6 +12,8 @@ import 'player_role.dart';
 
 class GameController extends ChangeNotifier {
   final List<WordPair> _wordBank = [];
+  final List<WordPair> _wordDeck = [];
+  final _random = Random();
   final Duration roundDuration = const Duration(seconds: 8);
 
   PlayerState? host;
@@ -25,7 +28,7 @@ class GameController extends ChangeNotifier {
   Future<void> loadWordBank() async {
     if (_wordBank.isNotEmpty) return;
     try {
-      final raw = await rootBundle.loadString('assets/data/words.json');
+      final raw = await rootBundle.loadString('assets/words.json');
       final List<dynamic> decoded = jsonDecode(raw) as List<dynamic>;
       _wordBank
         ..clear()
@@ -72,7 +75,7 @@ class GameController extends ChangeNotifier {
       _swapRoles();
     }
     currentRound = RoundState(
-      wordPair: _wordBank[(DateTime.now().millisecondsSinceEpoch) % _wordBank.length],
+      wordPair: _drawWord(),
       deadline: DateTime.now().add(roundDuration),
     );
     _ticker?.cancel();
@@ -164,6 +167,20 @@ class GameController extends ChangeNotifier {
     _ticker?.cancel();
     _nextRoundDelay?.cancel();
     super.dispose();
+  }
+
+  void _resetDeck() {
+    _wordDeck
+      ..clear()
+      ..addAll(_wordBank)
+      ..shuffle(_random);
+  }
+
+  WordPair _drawWord() {
+    if (_wordDeck.isEmpty) {
+      _resetDeck();
+    }
+    return _wordDeck.removeLast();
   }
 
   void _swapRoles() {
