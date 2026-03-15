@@ -131,7 +131,8 @@ switchInCurve: Curves.bounceIn, // To powinno sprawić, że słowo "wskoczy" z o
 child: Text(
 
     word,
-    key: ValueKey<String>(word), // To jest kluczowe!
+    key: ValueKey<int>(DateTime.now().millisecondsSinceEpoch),
+
     style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
   ),
 ),
