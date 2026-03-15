@@ -123,7 +123,7 @@ class _RoundScreenState extends State<RoundScreen> {
         padding: const EdgeInsets.all(24),
         child: Column(
           children: [
-            const Text('TEST:Powiedz głośno:')
+            const Text('DEBUG: Powiedz głośno:'),
             const SizedBox(height: 12),
             AnimatedSwitcher(
   duration: const Duration(milliseconds: 800),
