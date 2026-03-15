@@ -125,10 +125,17 @@ class _RoundScreenState extends State<RoundScreen> {
           children: [
             const Text('Powiedz głośno:'),
             const SizedBox(height: 12),
-            Text(
-              word,
-              style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+            AnimatedSwitcher(
+  duration: const Duration(milliseconds: 500),
+  child: Text(
+    word,
+    key: ValueKey<String>(word), // To jest kluczowe!
+    style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+  ),
+),
             ),
+  ),
+
             const SizedBox(height: 8),
             const Text('Przekaż telefon przeciwnikowi po wypowiedzeniu słowa.'),
           ],
@@ -148,10 +155,15 @@ class _RoundScreenState extends State<RoundScreen> {
           children: [
             const Text('Tłumaczenie po polsku:'),
             const SizedBox(height: 12),
-            Text(
-              translation,
-              style: theme.textTheme.headlineMedium,
-            ),
+            AnimatedSwitcher(
+  duration: const Duration(milliseconds: 500),
+  child: Text(
+    translation,
+    key: ValueKey<String>(translation),
+    style: theme.textTheme.headlineMedium,
+  ),
+),
+        ),
             const SizedBox(height: 16),
             if (correction != null) ...[
               Center(
