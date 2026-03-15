@@ -130,8 +130,7 @@ class _RoundScreenState extends State<RoundScreen> {
 switchInCurve: Curves.bounceIn, // To powinno sprawić, że słowo "wskoczy" z odbiciem!
 child: Text(
 
-    word,
-    key: ValueKey<int>(DateTime.now().millisecondsSinceEpoch),
+   key: ValueKey<String>(word),
 
     style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold, color: Colors.red),
 
