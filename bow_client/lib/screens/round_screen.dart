@@ -123,7 +123,7 @@ class _RoundScreenState extends State<RoundScreen> {
         padding: const EdgeInsets.all(24),
         child: Column(
           children: [
-            const Text('Powiedz głośno:'),
+            const Text('TEST:Powiedz głośno:')
             const SizedBox(height: 12),
             AnimatedSwitcher(
   duration: const Duration(milliseconds: 800),
@@ -132,7 +132,7 @@ child: Text(
 
    key: ValueKey<String>(word),
 
-    style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold, color: Colors.red),
+    style: GoogleFonts.lato(fontSize: 48, fontWeight: FontWeight.bold, color: Colors.red),
 
   ),
 ),
