@@ -123,8 +123,7 @@ class _RoundScreenState extends State<RoundScreen> {
         padding: const EdgeInsets.all(24),
         child: Column(
           children: [
-            const Text('DEBUG: Powiedz głośno:'),
-            const SizedBox(height: 12),
+            const Text('=== TEST DZIAŁANIA ==='),            const SizedBox(height: 12),
             AnimatedSwitcher(
   duration: const Duration(milliseconds: 800),
 switchInCurve: Curves.bounceIn, // To powinno sprawić, że słowo "wskoczy" z odbiciem!
@@ -132,7 +131,7 @@ child: Text(
 
    key: ValueKey<String>(word),
 
-    style: GoogleFonts.lato(fontSize: 48, fontWeight: FontWeight.bold, color: Colors.red),
+    style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold, color: Colors.red),
 
   ),
 ),
