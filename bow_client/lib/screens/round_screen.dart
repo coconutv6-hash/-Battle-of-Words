@@ -133,7 +133,8 @@ child: Text(
     word,
     key: ValueKey<int>(DateTime.now().millisecondsSinceEpoch),
 
-    style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+    style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold, color: Colors.red),
+
   ),
 ),
             ),
