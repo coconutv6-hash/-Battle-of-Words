@@ -126,8 +126,10 @@ class _RoundScreenState extends State<RoundScreen> {
             const Text('Powiedz głośno:'),
             const SizedBox(height: 12),
             AnimatedSwitcher(
-  duration: const Duration(milliseconds: 500),
-  child: Text(
+  duration: const Duration(milliseconds: 800),
+switchInCurve: Curves.bounceIn, // To powinno sprawić, że słowo "wskoczy" z odbiciem!
+child: Text(
+
     word,
     key: ValueKey<String>(word), // To jest kluczowe!
     style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
