@@ -13,11 +13,45 @@ class WordPair {
 
   static String _repairMojibake(String value) {
     if (!_looksMojibake(value)) return value;
+    final directFix = _replaceKnownBrokenSequences(value);
+    if (!_looksMojibake(directFix)) return directFix;
     try {
-      return utf8.decode(latin1.encode(value));
+      final decoded = utf8.decode(latin1.encode(value));
+      return _replaceKnownBrokenSequences(decoded);
     } catch (_) {
-      return value;
+      return directFix;
     }
+  }
+
+  static String _replaceKnownBrokenSequences(String value) {
+    const replacements = <String, String>{
+      'Ĺ‚': 'ł',
+      'Ĺ': 'ł',
+      'Ĺ›': 'ś',
+      'Ĺ': 'ś',
+      'Ĺ„': 'ń',
+      'Ĺ': 'ń',
+      'Ĺ¼': 'ż',
+      'Ĺź': 'ź',
+      'Ĺº': 'ź',
+      'Ä…': 'ą',
+      'Ä‡': 'ć',
+      'Ä™': 'ę',
+      'Ã³': 'ó',
+      'Å‚': 'ł',
+      'Åś': 'ś',
+      'Å„': 'ń',
+      'Å¼': 'ż',
+      'Åº': 'ź',
+      'Ł›': 'ś',
+      'Ł‡': 'ć',
+      'Ä‡': 'ć',
+    };
+    var fixed = value;
+    replacements.forEach((broken, correct) {
+      fixed = fixed.replaceAll(broken, correct);
+    });
+    return fixed;
   }
 
   static bool _looksMojibake(String value) {
