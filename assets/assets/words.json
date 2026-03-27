@@ -1,705 +1,2806 @@
 [
-  { "en": "apple", "pl": "jabłko" },
-  { "en": "banana", "pl": "banan" },
-  { "en": "orange", "pl": "pomarańcza" },
-  { "en": "pear", "pl": "gruszka" },
-  { "en": "peach", "pl": "brzoskwinia" },
-  { "en": "plum", "pl": "śliwka" },
-  { "en": "strawberry", "pl": "truskawka" },
-  { "en": "raspberry", "pl": "malina" },
-  { "en": "blueberry", "pl": "borówka" },
-  { "en": "watermelon", "pl": "arbuz" },
-  { "en": "melon", "pl": "melon" },
-  { "en": "cherry", "pl": "wiśnia" },
-  { "en": "grape", "pl": "winogrono" },
-  { "en": "lemon", "pl": "cytryna" },
-  { "en": "lime", "pl": "limonka" },
-  { "en": "pineapple", "pl": "ananas" },
-  { "en": "mango", "pl": "mango" },
-  { "en": "apricot", "pl": "morela" },
-  { "en": "fig", "pl": "figa" },
-  { "en": "date", "pl": "daktyl" },
-  { "en": "coconut", "pl": "kokos" },
-  { "en": "kiwi", "pl": "kiwi" },
-  { "en": "pomegranate", "pl": "granat" },
-  { "en": "papaya", "pl": "papaja" },
-  { "en": "cranberry", "pl": "żurawina" },
-  { "en": "blackberry", "pl": "jeżyna" },
-  { "en": "currant", "pl": "porzeczka" },
-  { "en": "olive", "pl": "oliwka" },
-  { "en": "avocado", "pl": "awokado" },
-  { "en": "tomato", "pl": "pomidor" },
-  { "en": "cucumber", "pl": "ogórek" },
-  { "en": "carrot", "pl": "marchew" },
-  { "en": "potato", "pl": "ziemniak" },
-  { "en": "onion", "pl": "cebula" },
-  { "en": "garlic", "pl": "czosnek" },
-  { "en": "cabbage", "pl": "kapusta" },
-  { "en": "lettuce", "pl": "sałata" },
-  { "en": "spinach", "pl": "szpinak" },
-  { "en": "broccoli", "pl": "brokuł" },
-  { "en": "cauliflower", "pl": "kalafior" },
-  { "en": "pepper", "pl": "papryka" },
-  { "en": "pumpkin", "pl": "dynia" },
-  { "en": "zucchini", "pl": "cukinia" },
-  { "en": "beetroot", "pl": "burak" },
-  { "en": "radish", "pl": "rzodkiewka" },
-  { "en": "parsley", "pl": "pietruszka" },
-  { "en": "celery", "pl": "seler" },
-  { "en": "leek", "pl": "por" },
-  { "en": "eggplant", "pl": "bakłażan" },
-  { "en": "bean", "pl": "fasola" },
-  { "en": "pea", "pl": "groszek" },
-  { "en": "corn", "pl": "kukurydza" },
-  { "en": "lentil", "pl": "soczewica" },
-  { "en": "chickpea", "pl": "ciecierzyca" },
-  { "en": "rice", "pl": "ryż" },
-  { "en": "wheat", "pl": "pszenica" },
-  { "en": "oat", "pl": "owies" },
-  { "en": "barley", "pl": "jęczmień" },
-  { "en": "rye", "pl": "żyto" },
-  { "en": "bread", "pl": "chleb" },
-  { "en": "butter", "pl": "masło" },
-  { "en": "cheese", "pl": "ser" },
-  { "en": "yogurt", "pl": "jogurt" },
-  { "en": "milk", "pl": "mleko" },
-  { "en": "cream", "pl": "śmietana" },
-  { "en": "egg", "pl": "jajko" },
-  { "en": "chicken", "pl": "kurczak" },
-  { "en": "beef", "pl": "wołowina" },
-  { "en": "pork", "pl": "wieprzowina" },
-  { "en": "lamb", "pl": "jagnięcina" },
-  { "en": "ham", "pl": "szynka" },
-  { "en": "sausage", "pl": "kiełbasa" },
-  { "en": "fish", "pl": "ryba" },
-  { "en": "salmon", "pl": "łosoś" },
-  { "en": "trout", "pl": "pstrąg" },
-  { "en": "herring", "pl": "śledź" },
-  { "en": "shrimp", "pl": "krewetka" },
-  { "en": "crab", "pl": "krab" },
-  { "en": "lobster", "pl": "homar" },
-  { "en": "mussel", "pl": "małża" },
-  { "en": "oyster", "pl": "ostryga" },
-  { "en": "breadroll", "pl": "bułka" },
-  { "en": "cake", "pl": "ciasto" },
-  { "en": "cookie", "pl": "ciastko" },
-  { "en": "pie", "pl": "tarta" },
-  { "en": "sugar", "pl": "cukier" },
-  { "en": "salt", "pl": "sól" },
-  { "en": "peppercorn", "pl": "pieprz" },
-  { "en": "spice", "pl": "przyprawa" },
-  { "en": "herb", "pl": "zioło" },
-  { "en": "basil", "pl": "bazylia" },
-  { "en": "oregano", "pl": "oregano" },
-  { "en": "rosemary", "pl": "rozmaryn" },
-  { "en": "thyme", "pl": "tymianek" },
-  { "en": "mint", "pl": "mięta" },
-  { "en": "cinnamon", "pl": "cynamon" },
-  { "en": "vanilla", "pl": "wanilia" },
-  { "en": "honey", "pl": "miód" },
-  { "en": "jam", "pl": "dżem" },
-  { "en": "soup", "pl": "zupa" },
-  { "en": "salad", "pl": "sałatka" },
-  { "en": "breakfast", "pl": "śniadanie" },
-  { "en": "lunch", "pl": "lunch" },
-  { "en": "dinner", "pl": "obiad" },
-  { "en": "snack", "pl": "przekąska" },
-  { "en": "dessert", "pl": "deser" },
-  { "en": "water", "pl": "woda" },
-  { "en": "juice", "pl": "sok" },
-  { "en": "tea", "pl": "herbata" },
-  { "en": "coffee", "pl": "kawa" },
-  { "en": "beer", "pl": "piwo" },
-  { "en": "wine", "pl": "wino" },
-  { "en": "soda", "pl": "napój gazowany" },
-  { "en": "animal", "pl": "zwierzę" },
-  { "en": "dog", "pl": "pies" },
-  { "en": "cat", "pl": "kot" },
-  { "en": "horse", "pl": "koń" },
-  { "en": "cow", "pl": "krowa" },
-  { "en": "pig", "pl": "świnia" },
-  { "en": "sheep", "pl": "owca" },
-  { "en": "goat", "pl": "koza" },
-  { "en": "rabbit", "pl": "królik" },
-  { "en": "fox", "pl": "lis" },
-  { "en": "wolf", "pl": "wilk" },
-  { "en": "bear", "pl": "niedźwiedź" },
-  { "en": "lion", "pl": "lew" },
-  { "en": "tiger", "pl": "tygrys" },
-  { "en": "monkey", "pl": "małpa" },
-  { "en": "elephant", "pl": "słoń" },
-  { "en": "giraffe", "pl": "żyrafa" },
-  { "en": "zebra", "pl": "zebra" },
-  { "en": "kangaroo", "pl": "kangur" },
-  { "en": "koala", "pl": "koala" },
-  { "en": "panda", "pl": "panda" },
-  { "en": "camel", "pl": "wielbłąd" },
-  { "en": "squirrel", "pl": "wiewiórka" },
-  { "en": "mouse", "pl": "mysz" },
-  { "en": "rat", "pl": "szczur" },
-  { "en": "hedgehog", "pl": "jeż" },
-  { "en": "badger", "pl": "borsuk" },
-  { "en": "beaver", "pl": "bóbr" },
-  { "en": "otter", "pl": "wydra" },
-  { "en": "deer", "pl": "jeleń" },
-  { "en": "elk", "pl": "łoś" },
-  { "en": "boar", "pl": "dzik" },
-  { "en": "bird", "pl": "ptak" },
-  { "en": "eagle", "pl": "orzeł" },
-  { "en": "hawk", "pl": "jastrząb" },
-  { "en": "owl", "pl": "sowa" },
-  { "en": "sparrow", "pl": "wróbel" },
-  { "en": "pigeon", "pl": "gołąb" },
-  { "en": "duck", "pl": "kaczka" },
-  { "en": "goose", "pl": "gęś" },
-  { "en": "swan", "pl": "łabędź" },
-  { "en": "stork", "pl": "bocian" },
-  { "en": "peacock", "pl": "paw" },
-  { "en": "rooster", "pl": "kogut" },
-  { "en": "hen", "pl": "kura" },
-  { "en": "chick", "pl": "pisklę" },
-  { "en": "butterfly", "pl": "motyl" },
-  { "en": "bee", "pl": "pszczoła" },
-  { "en": "wasp", "pl": "osa" },
-  { "en": "ant", "pl": "mrówka" },
-  { "en": "beetle", "pl": "chrząszcz" },
-  { "en": "ladybug", "pl": "biedronka" },
-  { "en": "fly", "pl": "mucha" },
-  { "en": "mosquito", "pl": "komar" },
-  { "en": "spider", "pl": "pająk" },
-  { "en": "worm", "pl": "robak" },
-  { "en": "forest", "pl": "las" },
-  { "en": "tree", "pl": "drzewo" },
-  { "en": "bush", "pl": "krzew" },
-  { "en": "flower", "pl": "kwiat" },
-  { "en": "leaf", "pl": "liść" },
-  { "en": "root", "pl": "korzeń" },
-  { "en": "branch", "pl": "gałąź" },
-  { "en": "trunk", "pl": "pień" },
-  { "en": "bark", "pl": "kora" },
-  { "en": "seed", "pl": "nasiono" },
-  { "en": "soil", "pl": "gleba" },
-  { "en": "stone", "pl": "kamień" },
-  { "en": "rock", "pl": "skała" },
-  { "en": "mountain", "pl": "góra" },
-  { "en": "hill", "pl": "wzgórze" },
-  { "en": "valley", "pl": "dolina" },
-  { "en": "plain", "pl": "równina" },
-  { "en": "river", "pl": "rzeka" },
-  { "en": "stream", "pl": "strumień" },
-  { "en": "lake", "pl": "jezioro" },
-  { "en": "sea", "pl": "morze" },
-  { "en": "ocean", "pl": "ocean" },
-  { "en": "waterfall", "pl": "wodospad" },
-  { "en": "cave", "pl": "jaskinia" },
-  { "en": "desert", "pl": "pustynia" },
-  { "en": "beach", "pl": "plaża" },
-  { "en": "coast", "pl": "wybrzeże" },
-  { "en": "island", "pl": "wyspa" },
-  { "en": "peninsula", "pl": "półwysep" },
-  { "en": "rain", "pl": "deszcz" },
-  { "en": "snow", "pl": "śnieg" },
-  { "en": "hail", "pl": "grad" },
-  { "en": "fog", "pl": "mgła" },
-  { "en": "cloud", "pl": "chmura" },
-  { "en": "sky", "pl": "niebo" },
-  { "en": "sun", "pl": "słońce" },
-  { "en": "moon", "pl": "księżyc" },
-  { "en": "star", "pl": "gwiazda" },
-  { "en": "wind", "pl": "wiatr" },
-  { "en": "storm", "pl": "burza" },
-  { "en": "thunder", "pl": "grzmot" },
-  { "en": "lightning", "pl": "błyskawica" },
-  { "en": "rainbow", "pl": "tęcza" },
-  { "en": "climate", "pl": "klimat" },
-  { "en": "weather", "pl": "pogoda" },
-  { "en": "temperature", "pl": "temperatura" },
-  { "en": "season", "pl": "pora roku" },
-  { "en": "spring", "pl": "wiosna" },
-  { "en": "summer", "pl": "lato" },
-  { "en": "autumn", "pl": "jesień" },
-  { "en": "winter", "pl": "zima" },
-  { "en": "north", "pl": "północ" },
-  { "en": "south", "pl": "południe" },
-  { "en": "east", "pl": "wschód" },
-  { "en": "west", "pl": "zachód" },
-  { "en": "compass", "pl": "kompas" },
-  { "en": "map", "pl": "mapa" },
-  { "en": "city", "pl": "miasto" },
-  { "en": "town", "pl": "miasteczko" },
-  { "en": "village", "pl": "wieś" },
-  { "en": "street", "pl": "ulica" },
-  { "en": "road", "pl": "droga" },
-  { "en": "square", "pl": "plac" },
-  { "en": "bridge", "pl": "most" },
-  { "en": "park", "pl": "park" },
-  { "en": "garden", "pl": "ogród" },
-  { "en": "playground", "pl": "plac zabaw" },
-  { "en": "school", "pl": "szkoła" },
-  { "en": "hospital", "pl": "szpital" },
-  { "en": "library", "pl": "biblioteka" },
-  { "en": "museum", "pl": "muzeum" },
-  { "en": "theater", "pl": "teatr" },
-  { "en": "cinema", "pl": "kino" },
-  { "en": "restaurant", "pl": "restauracja" },
-  { "en": "cafe", "pl": "kawiarnia" },
-  { "en": "shop", "pl": "sklep" },
-  { "en": "market", "pl": "targ" },
-  { "en": "station", "pl": "dworzec" },
-  { "en": "airport", "pl": "lotnisko" },
-  { "en": "harbor", "pl": "port" },
-  { "en": "building", "pl": "budynek" },
-  { "en": "house", "pl": "dom" },
-  { "en": "apartment", "pl": "mieszkanie" },
-  { "en": "room", "pl": "pokój" },
-  { "en": "kitchen", "pl": "kuchnia" },
-  { "en": "bathroom", "pl": "łazienka" },
-  { "en": "bedroom", "pl": "sypialnia" },
-  { "en": "livingroom", "pl": "salon" },
-  { "en": "attic", "pl": "strych" },
-  { "en": "basement", "pl": "piwnica" },
-  { "en": "roof", "pl": "dach" },
-  { "en": "wall", "pl": "ściana" },
-  { "en": "door", "pl": "drzwi" },
-  { "en": "window", "pl": "okno" },
-  { "en": "floor", "pl": "podłoga" },
-  { "en": "ceiling", "pl": "sufit" },
-  { "en": "stairs", "pl": "schody" },
-  { "en": "elevator", "pl": "winda" },
-  { "en": "balcony", "pl": "balkon" },
-  { "en": "garage", "pl": "garaż" },
-  { "en": "furniture", "pl": "meble" },
-  { "en": "chair", "pl": "krzesło" },
-  { "en": "armchair", "pl": "fotel" },
-  { "en": "sofa", "pl": "kanapa" },
-  { "en": "table", "pl": "stół" },
-  { "en": "desk", "pl": "biurko" },
-  { "en": "bed", "pl": "łóżko" },
-  { "en": "wardrobe", "pl": "szafa" },
-  { "en": "shelf", "pl": "półka" },
-  { "en": "cabinet", "pl": "szafka" },
-  { "en": "lamp", "pl": "lampa" },
-  { "en": "carpet", "pl": "dywan" },
-  { "en": "curtain", "pl": "zasłona" },
-  { "en": "mirror", "pl": "lustro" },
-  { "en": "clock", "pl": "zegar" },
-  { "en": "picture", "pl": "obraz" },
-  { "en": "television", "pl": "telewizor" },
-  { "en": "computer", "pl": "komputer" },
-  { "en": "laptop", "pl": "laptop" },
-  { "en": "keyboard", "pl": "klawiatura" },
-  { "en": "mouse_device", "pl": "myszka" },
-  { "en": "monitor", "pl": "monitor" },
-  { "en": "printer", "pl": "drukarka" },
-  { "en": "router", "pl": "router" },
-  { "en": "smartphone", "pl": "smartfon" },
-  { "en": "tablet", "pl": "tablet" },
-  { "en": "camera", "pl": "aparat" },
-  { "en": "headphones", "pl": "słuchawki" },
-  { "en": "microphone", "pl": "mikrofon" },
-  { "en": "speaker", "pl": "głośnik" },
-  { "en": "battery", "pl": "bateria" },
-  { "en": "charger", "pl": "ładowarka" },
-  { "en": "cable", "pl": "kabel" },
-  { "en": "plug", "pl": "wtyczka" },
-  { "en": "socket", "pl": "gniazdko" },
-  { "en": "internet", "pl": "internet" },
-  { "en": "website", "pl": "strona internetowa" },
-  { "en": "password", "pl": "hasło" },
-  { "en": "software", "pl": "oprogramowanie" },
-  { "en": "hardware", "pl": "sprzęt" },
-  { "en": "update", "pl": "aktualizacja" },
-  { "en": "backup", "pl": "kopia zapasowa" },
-  { "en": "cloud", "pl": "chmura danych" },
-  { "en": "server", "pl": "serwer" },
-  { "en": "network", "pl": "sieć" },
-  { "en": "database", "pl": "baza danych" },
-  { "en": "file", "pl": "plik" },
-  { "en": "folder", "pl": "folder" },
-  { "en": "settings", "pl": "ustawienia" },
-  { "en": "message", "pl": "wiadomość" },
-  { "en": "notification", "pl": "powiadomienie" },
-  { "en": "user", "pl": "użytkownik" },
-  { "en": "account", "pl": "konto" },
-  { "en": "profile", "pl": "profil" },
-  { "en": "privacy", "pl": "prywatność" },
-  { "en": "security", "pl": "bezpieczeństwo" },
-  { "en": "algorithm", "pl": "algorytm" },
-  { "en": "robot", "pl": "robot" },
-  { "en": "machine", "pl": "maszyna" },
-  { "en": "vehicle", "pl": "pojazd" },
-  { "en": "car", "pl": "samochód" },
-  { "en": "bus", "pl": "autobus" },
-  { "en": "tram", "pl": "tramwaj" },
-  { "en": "train", "pl": "pociąg" },
-  { "en": "subway", "pl": "metro" },
-  { "en": "bicycle", "pl": "rower" },
-  { "en": "scooter", "pl": "hulajnoga" },
-  { "en": "motorcycle", "pl": "motocykl" },
-  { "en": "truck", "pl": "ciężarówka" },
-  { "en": "ship", "pl": "statek" },
-  { "en": "boat", "pl": "łódź" },
-  { "en": "plane", "pl": "samolot" },
-  { "en": "helicopter", "pl": "helikopter" },
-  { "en": "rocket", "pl": "rakieta" },
-  { "en": "passport", "pl": "paszport" },
-  { "en": "ticket", "pl": "bilet" },
-  { "en": "luggage", "pl": "bagaż" },
-  { "en": "suitcase", "pl": "walizka" },
-  { "en": "backpack", "pl": "plecak" },
-  { "en": "hotel", "pl": "hotel" },
-  { "en": "reservation", "pl": "rezerwacja" },
-  { "en": "checkin", "pl": "zameldowanie" },
-  { "en": "checkout", "pl": "wymeldowanie" },
-  { "en": "tourist", "pl": "turysta" },
-  { "en": "guide", "pl": "przewodnik" },
-  { "en": "maple", "pl": "klon" },
-  { "en": "birch", "pl": "brzoza" },
-  { "en": "pine", "pl": "sosna" },
-  { "en": "spruce", "pl": "świerk" },
-  { "en": "fir", "pl": "jodła" },
-  { "en": "cedar", "pl": "cedr" },
-  { "en": "willow", "pl": "wierzba" },
-  { "en": "poplar", "pl": "topola" },
-  { "en": "ash", "pl": "jesion" },
-  { "en": "hazel", "pl": "leszczyna" },
-  { "en": "elder", "pl": "bez" },
-  { "en": "chestnut", "pl": "kasztanowiec" },
-  { "en": "walnut", "pl": "orzech włoski" },
-  { "en": "acorn", "pl": "żołądź" },
-  { "en": "mushroom", "pl": "grzyb" },
-  { "en": "berry", "pl": "jagoda" },
-  { "en": "heron", "pl": "czapla" },
-  { "en": "seagull", "pl": "mewa" },
-  { "en": "shark", "pl": "rekin" },
-  { "en": "dolphin", "pl": "delfin" },
-  { "en": "whale", "pl": "wieloryb" },
-  { "en": "seal", "pl": "foka" },
-  { "en": "penguin", "pl": "pingwin" },
-  { "en": "polar_bear", "pl": "niedźwiedź polarny" },
-  { "en": "reef", "pl": "rafa" },
-  { "en": "coral", "pl": "koral" },
-  { "en": "octopus", "pl": "ośmiornica" },
-  { "en": "jellyfish", "pl": "meduza" },
-  { "en": "turtle", "pl": "żółw" },
-  { "en": "seahorse", "pl": "konik morski" },
-  { "en": "clam", "pl": "małż" },
-  { "en": "kelp", "pl": "wodorost" },
-  { "en": "seaweed", "pl": "glon" },
-  { "en": "algae", "pl": "alga" },
-  { "en": "barnacle", "pl": "pąkla" },
-  { "en": "plankton", "pl": "plankton" },
-  { "en": "harvest", "pl": "żniwa" },
-  { "en": "farmer", "pl": "rolnik" },
-  { "en": "tractor", "pl": "ciągnik" },
-  { "en": "field", "pl": "pole" },
-  { "en": "grain", "pl": "zboże" },
-  { "en": "hay", "pl": "siano" },
-  { "en": "barn", "pl": "stodoła" },
-  { "en": "stable", "pl": "stajnia" },
-  { "en": "coop", "pl": "kurnik" },
-  { "en": "pasture", "pl": "pastwisko" },
-  { "en": "fence", "pl": "płot" },
-  { "en": "tool", "pl": "narzędzie" },
-  { "en": "hammer", "pl": "młotek" },
-  { "en": "screwdriver", "pl": "śrubokręt" },
-  { "en": "wrench", "pl": "klucz" },
-  { "en": "pliers", "pl": "szczypce" },
-  { "en": "saw", "pl": "piła" },
-  { "en": "drill", "pl": "wiertarka" },
-  { "en": "nail", "pl": "gwóźdź" },
-  { "en": "screw", "pl": "śruba" },
-  { "en": "bolt", "pl": "śruba z nakrętką" },
-  { "en": "nut", "pl": "nakrętka" },
-  { "en": "glove", "pl": "rękawica" },
-  { "en": "goggles", "pl": "gogle" },
-  { "en": "helmet", "pl": "kask" },
-  { "en": "safety", "pl": "bezpieczeństwo" },
-  { "en": "measure", "pl": "miarka" },
-  { "en": "level", "pl": "poziomica" },
-  { "en": "tape", "pl": "taśma" },
-  { "en": "paint", "pl": "farba" },
-  { "en": "brush", "pl": "pędzel" },
-  { "en": "roller", "pl": "wałek" },
-  { "en": "bucket", "pl": "wiadro" },
-  { "en": "ladder", "pl": "drabina" },
-  { "en": "cement", "pl": "cement" },
-  { "en": "brick", "pl": "cegła" },
-  { "en": "sand", "pl": "piasek" },
-  { "en": "gravel", "pl": "żwir" },
-  { "en": "concrete", "pl": "beton" },
-  { "en": "steel", "pl": "stal" },
-  { "en": "wood", "pl": "drewno" },
-  { "en": "plastic", "pl": "plastik" },
-  { "en": "glass", "pl": "szkło" },
-  { "en": "paper", "pl": "papier" },
-  { "en": "cardboard", "pl": "tektura" },
-  { "en": "rubber", "pl": "guma" },
-  { "en": "cotton", "pl": "bawełna" },
-  { "en": "wool", "pl": "wełna" },
-  { "en": "silk", "pl": "jedwab" },
-  { "en": "leather", "pl": "skóra" },
-  { "en": "fabric", "pl": "tkanina" },
-  { "en": "thread", "pl": "nić" },
-  { "en": "needle", "pl": "igła" },
-  { "en": "scissors", "pl": "nożyczki" },
-  { "en": "button", "pl": "guzik" },
-  { "en": "zipper", "pl": "zamek" },
-  { "en": "sewing", "pl": "szycie" },
-  { "en": "pattern", "pl": "wykrój" },
-  { "en": "notebook", "pl": "notes" },
-  { "en": "pen", "pl": "długopis" },
-  { "en": "pencil", "pl": "ołówek" },
-  { "en": "marker", "pl": "marker" },
-  { "en": "eraser", "pl": "gumka" },
-  { "en": "sharpener", "pl": "temperówka" },
-  { "en": "ruler", "pl": "linijka" },
-  { "en": "calculator", "pl": "kalkulator" },
-  { "en": "paperclip", "pl": "spinacz" },
-  { "en": "envelope", "pl": "koperta" },
-  { "en": "stamp", "pl": "znaczek" },
-  { "en": "mailbox", "pl": "skrzynka pocztowa" },
-  { "en": "package", "pl": "paczka" },
-  { "en": "parcel", "pl": "przesyłka" },
-  { "en": "postman", "pl": "listonosz" },
-  { "en": "letter", "pl": "list" },
-  { "en": "calendar", "pl": "kalendarz" },
-  { "en": "schedule", "pl": "grafik" },
-  { "en": "meeting", "pl": "spotkanie" },
-  { "en": "appointment", "pl": "wizyta" },
-  { "en": "deadline", "pl": "termin" },
-  { "en": "project", "pl": "projekt" },
-  { "en": "task", "pl": "zadanie" },
-  { "en": "note", "pl": "notatka" },
-  { "en": "idea", "pl": "pomysł" },
-  { "en": "plan", "pl": "plan" },
-  { "en": "strategy", "pl": "strategia" },
-  { "en": "goal", "pl": "cel" },
-  { "en": "success", "pl": "sukces" },
-  { "en": "failure", "pl": "porażka" },
-  { "en": "progress", "pl": "postęp" },
-  { "en": "improvement", "pl": "poprawa" },
-  { "en": "innovation", "pl": "innowacja" },
-  { "en": "motivation", "pl": "motywacja" },
-  { "en": "focus", "pl": "koncentracja" },
-  { "en": "team", "pl": "zespół" },
-  { "en": "leader", "pl": "lider" },
-  { "en": "manager", "pl": "menedżer" },
-  { "en": "employee", "pl": "pracownik" },
-  { "en": "colleague", "pl": "kolega z pracy" },
-  { "en": "customer", "pl": "klient" },
-  { "en": "partner", "pl": "partner" },
-  { "en": "contract", "pl": "kontrakt" },
-  { "en": "invoice", "pl": "faktura" },
-  { "en": "budget", "pl": "budżet" },
-  { "en": "finance", "pl": "finanse" },
-  { "en": "investment", "pl": "inwestycja" },
-  { "en": "profit", "pl": "zysk" },
-  { "en": "loss", "pl": "strata" },
-  { "en": "market", "pl": "rynek" },
-  { "en": "supply", "pl": "podaż" },
-  { "en": "demand", "pl": "popyt" },
-  { "en": "price", "pl": "cena" },
-  { "en": "value", "pl": "wartość" },
-  { "en": "data", "pl": "dane" },
-  { "en": "analysis", "pl": "analiza" },
-  { "en": "report", "pl": "raport" },
-  { "en": "risk", "pl": "ryzyko" },
-  { "en": "policy", "pl": "polityka" },
-  { "en": "regulation", "pl": "regulacja" },
-  { "en": "law", "pl": "prawo" },
-  { "en": "justice", "pl": "sprawiedliwość" },
-  { "en": "court", "pl": "sąd" },
-  { "en": "judge", "pl": "sędzia" },
-  { "en": "lawyer", "pl": "prawnik" },
-  { "en": "police", "pl": "policja" },
-  { "en": "firefighter", "pl": "strażak" },
-  { "en": "doctor", "pl": "lekarz" },
-  { "en": "nurse", "pl": "pielęgniarka" },
-  { "en": "scientist", "pl": "naukowiec" },
-  { "en": "engineer", "pl": "inżynier" },
-  { "en": "architect", "pl": "architekt" },
-  { "en": "artist", "pl": "artysta" },
-  { "en": "musician", "pl": "muzyk" },
-  { "en": "writer", "pl": "pisarz" },
-  { "en": "journalist", "pl": "dziennikarz" },
-  { "en": "photographer", "pl": "fotograf" },
-  { "en": "teacher", "pl": "nauczyciel" },
-  { "en": "student", "pl": "student" },
-  { "en": "athlete", "pl": "sportowiec" },
-  { "en": "coach", "pl": "trener" },
-  { "en": "chef", "pl": "szef kuchni" },
-  { "en": "waiter", "pl": "kelner" },
-  { "en": "barista", "pl": "barista" },
-  { "en": "cashier", "pl": "kasjer" },
-  { "en": "mechanic", "pl": "mechanik" },
-  { "en": "electrician", "pl": "elektryk" },
-  { "en": "plumber", "pl": "hydraulik" },
-  { "en": "carpenter", "pl": "stolarz" },
-  { "en": "smith", "pl": "kowal" },
-  { "en": "tailor", "pl": "krawiec" },
-  { "en": "hairdresser", "pl": "fryzjer" },
-  { "en": "pilot", "pl": "pilot" },
-  { "en": "sailor", "pl": "żeglarz" },
-  { "en": "soldier", "pl": "żołnierz" },
-  { "en": "translator", "pl": "tłumacz" },
-  { "en": "psychologist", "pl": "psycholog" },
-  { "en": "therapist", "pl": "terapeuta" },
-  { "en": "vet", "pl": "weterynarz" },
-  { "en": "librarian", "pl": "bibliotekarz" },
-  { "en": "actor", "pl": "aktor" },
-  { "en": "actress", "pl": "aktorka" },
-  { "en": "singer", "pl": "piosenkarz" },
-  { "en": "composer", "pl": "kompozytor" },
-  { "en": "dancer", "pl": "tancerz" },
-  { "en": "sculptor", "pl": "rzeźbiarz" },
-  { "en": "painter", "pl": "malarz" },
-  { "en": "poet", "pl": "poeta" },
-  { "en": "accountant", "pl": "księgowy" },
-  { "en": "consultant", "pl": "konsultant" },
-  { "en": "analyst", "pl": "analityk" },
-  { "en": "researcher", "pl": "badacz" },
-  { "en": "entrepreneur", "pl": "przedsiębiorca" },
-  { "en": "founder", "pl": "założyciel" },
-  { "en": "trader", "pl": "handlarz" },
-  { "en": "broker", "pl": "makler" },
-  { "en": "miner", "pl": "górnik" },
-  { "en": "explorer", "pl": "odkrywca" },
-  { "en": "astronaut", "pl": "astronauta" },
-  { "en": "mayor", "pl": "burmistrz" },
-  { "en": "governor", "pl": "gubernator" },
-  { "en": "president", "pl": "prezydent" },
-  { "en": "minister", "pl": "minister" },
-  { "en": "ambassador", "pl": "ambasador" },
-  { "en": "diplomat", "pl": "dyplomata" },
-  { "en": "citizen", "pl": "obywatel" },
-  { "en": "neighbor", "pl": "sąsiad" },
-  { "en": "friend", "pl": "przyjaciel" },
-  { "en": "family", "pl": "rodzina" },
-  { "en": "parent", "pl": "rodzic" },
-  { "en": "mother", "pl": "matka" },
-  { "en": "father", "pl": "ojciec" },
-  { "en": "sister", "pl": "siostra" },
-  { "en": "brother", "pl": "brat" },
-  { "en": "child", "pl": "dziecko" },
-  { "en": "baby", "pl": "niemowlę" },
-  { "en": "teenager", "pl": "nastolatek" },
-  { "en": "adult", "pl": "dorosły" },
-  { "en": "senior", "pl": "senior" },
-  { "en": "marriage", "pl": "małżeństwo" },
-  { "en": "wedding", "pl": "ślub" },
-  { "en": "birthday", "pl": "urodziny" },
-  { "en": "holiday", "pl": "święto" },
-  { "en": "festival", "pl": "festiwal" },
-  { "en": "celebration", "pl": "uroczystość" },
-  { "en": "tradition", "pl": "tradycja" },
-  { "en": "culture", "pl": "kultura" },
-  { "en": "history", "pl": "historia" },
-  { "en": "future", "pl": "przyszłość" },
-  { "en": "present", "pl": "teraźniejszość" },
-  { "en": "past", "pl": "przeszłość" },
-  { "en": "memory", "pl": "pamięć" },
-  { "en": "story", "pl": "opowieść" },
-  { "en": "legend", "pl": "legenda" },
-  { "en": "hero", "pl": "bohater" },
-  { "en": "journey", "pl": "podróż" },
-  { "en": "adventure", "pl": "przygoda" },
-  { "en": "challenge", "pl": "wyzwanie" },
-  { "en": "victory", "pl": "zwycięstwo" },
-  { "en": "defeat", "pl": "porażka" },
-  { "en": "freedom", "pl": "wolność" },
-  { "en": "equality", "pl": "równość" },
-  { "en": "respect", "pl": "szacunek" },
-  { "en": "trust", "pl": "zaufanie" },
-  { "en": "loyalty", "pl": "lojalność" },
-  { "en": "courage", "pl": "odwaga" },
-  { "en": "patience", "pl": "cierpliwość" },
-  { "en": "kindness", "pl": "życzliwość" },
-  { "en": "empathy", "pl": "empatia" },
-  { "en": "honesty", "pl": "uczciwość" },
-  { "en": "wisdom", "pl": "mądrość" },
-  { "en": "knowledge", "pl": "wiedza" },
-  { "en": "learning", "pl": "nauka" },
-  { "en": "exam", "pl": "egzamin" },
-  { "en": "grade", "pl": "ocena" },
-  { "en": "diploma", "pl": "dyplom" },
-  { "en": "scholarship", "pl": "stypendium" },
-  { "en": "laboratory", "pl": "laboratorium" },
-  { "en": "experiment", "pl": "eksperyment" },
-  { "en": "result", "pl": "wynik" },
-  { "en": "conclusion", "pl": "wniosek" },
-  { "en": "presentation", "pl": "prezentacja" },
-  { "en": "conference", "pl": "konferencja" },
-  { "en": "seminar", "pl": "seminarium" },
-  { "en": "workshop", "pl": "warsztat" },
-  { "en": "community", "pl": "społeczność" },
-  { "en": "support", "pl": "wsparcie" },
-  { "en": "volunteer", "pl": "wolontariusz" },
-  { "en": "charity", "pl": "organizacja charytatywna" },
-  { "en": "donation", "pl": "darowizna" },
-  { "en": "movement", "pl": "ruch" },
-  { "en": "initiative", "pl": "inicjatywa" },
-  { "en": "vision", "pl": "wizja" },
-  { "en": "mission", "pl": "misja" },
-  { "en": "impact", "pl": "wpływ" },
-  { "en": "environment", "pl": "środowisko" },
-  { "en": "ecosystem", "pl": "ekosystem" },
-  { "en": "pollution", "pl": "zanieczyszczenie" },
-  { "en": "recycling", "pl": "recykling" },
-  { "en": "energy", "pl": "energia" },
-  { "en": "solar", "pl": "słoneczny" },
-  { "en": "windmill", "pl": "wiatrak" },
-  { "en": "battery_pack", "pl": "magazyn energii" },
-  { "en": "transport", "pl": "transport" },
-  { "en": "logistics", "pl": "logistyka" },
-  { "en": "warehouse", "pl": "magazyn" },
-  { "en": "delivery", "pl": "dostawa" },
-  { "en": "inventory", "pl": "zapasy" },
-  { "en": "storage", "pl": "składowanie" },
-  { "en": "tracking", "pl": "śledzenie" },
-  { "en": "customer_service", "pl": "obsługa klienta" },
-  { "en": "helpdesk", "pl": "pomoc techniczna" },
-  { "en": "feedback", "pl": "opinie" },
-  { "en": "survey", "pl": "ankieta" },
-  { "en": "rating", "pl": "ocena" },
-  { "en": "review", "pl": "recenzja" },
-  { "en": "benchmark", "pl": "benchmark" },
-  { "en": "standard", "pl": "standard" },
-  { "en": "quality", "pl": "jakość" },
-  { "en": "warranty", "pl": "gwarancja" },
-  { "en": "return", "pl": "zwrot" },
-  { "en": "exchange", "pl": "wymiana" },
-  { "en": "repair", "pl": "naprawa" },
-  { "en": "maintenance", "pl": "utrzymanie" },
-  { "en": "inspection", "pl": "inspekcja" },
-  { "en": "procedure", "pl": "procedura" },
-  { "en": "manual", "pl": "podręcznik" },
-  { "en": "prototype", "pl": "prototyp" },
-  { "en": "version", "pl": "wersja" },
-  { "en": "roadmap", "pl": "plan działania" },
-  { "en": "milestone", "pl": "kamień milowy" },
-  { "en": "sprint", "pl": "sprint" },
-  { "en": "backlog", "pl": "lista zadań" },
-  { "en": "issue", "pl": "problem" },
-  { "en": "bug", "pl": "błąd" },
-  { "en": "fix", "pl": "poprawka" },
-  { "en": "patch", "pl": "łatka" },
-  { "en": "commit", "pl": "commit" },
-  { "en": "merge", "pl": "scalenie" },
-  { "en": "repository", "pl": "repozytorium" },
-  { "en": "deploy", "pl": "wdrożenie" },
-  { "en": "monitoring", "pl": "monitoring" },
-  { "en": "alert", "pl": "alert" },
-  { "en": "incident", "pl": "incydent" },
-  { "en": "uptime", "pl": "czas działania" },
-  { "en": "latency", "pl": "opóźnienie" },
-  { "en": "optimization", "pl": "optymalizacja" },
-  { "en": "scalability", "pl": "skalowalność" },
-  { "en": "performance", "pl": "wydajność" },
-  { "en": "load", "pl": "obciążenie" },
-  { "en": "capacity", "pl": "pojemność" },
-  { "en": "usage", "pl": "użycie" },
-  { "en": "quota", "pl": "limit" }
+  {
+    "en": "apple",
+    "pl": "jabĹ‚ko"
+  },
+  {
+    "en": "banana",
+    "pl": "banan"
+  },
+  {
+    "en": "orange",
+    "pl": "pomaraĹ„cza"
+  },
+  {
+    "en": "pear",
+    "pl": "gruszka"
+  },
+  {
+    "en": "peach",
+    "pl": "brzoskwinia"
+  },
+  {
+    "en": "plum",
+    "pl": "Ĺ›liwka"
+  },
+  {
+    "en": "strawberry",
+    "pl": "truskawka"
+  },
+  {
+    "en": "raspberry",
+    "pl": "malina"
+  },
+  {
+    "en": "blueberry",
+    "pl": "borĂłwka"
+  },
+  {
+    "en": "watermelon",
+    "pl": "arbuz"
+  },
+  {
+    "en": "melon",
+    "pl": "melon"
+  },
+  {
+    "en": "cherry",
+    "pl": "wiĹ›nia"
+  },
+  {
+    "en": "grape",
+    "pl": "winogrono"
+  },
+  {
+    "en": "lemon",
+    "pl": "cytryna"
+  },
+  {
+    "en": "lime",
+    "pl": "limonka"
+  },
+  {
+    "en": "pineapple",
+    "pl": "ananas"
+  },
+  {
+    "en": "mango",
+    "pl": "mango"
+  },
+  {
+    "en": "apricot",
+    "pl": "morela"
+  },
+  {
+    "en": "fig",
+    "pl": "figa"
+  },
+  {
+    "en": "date",
+    "pl": "daktyl"
+  },
+  {
+    "en": "coconut",
+    "pl": "kokos"
+  },
+  {
+    "en": "kiwi",
+    "pl": "kiwi"
+  },
+  {
+    "en": "pomegranate",
+    "pl": "granat"
+  },
+  {
+    "en": "papaya",
+    "pl": "papaja"
+  },
+  {
+    "en": "cranberry",
+    "pl": "ĹĽurawina"
+  },
+  {
+    "en": "blackberry",
+    "pl": "jeĹĽyna"
+  },
+  {
+    "en": "currant",
+    "pl": "porzeczka"
+  },
+  {
+    "en": "olive",
+    "pl": "oliwka"
+  },
+  {
+    "en": "avocado",
+    "pl": "awokado"
+  },
+  {
+    "en": "tomato",
+    "pl": "pomidor"
+  },
+  {
+    "en": "cucumber",
+    "pl": "ogĂłrek"
+  },
+  {
+    "en": "carrot",
+    "pl": "marchew"
+  },
+  {
+    "en": "potato",
+    "pl": "ziemniak"
+  },
+  {
+    "en": "onion",
+    "pl": "cebula"
+  },
+  {
+    "en": "garlic",
+    "pl": "czosnek"
+  },
+  {
+    "en": "cabbage",
+    "pl": "kapusta"
+  },
+  {
+    "en": "lettuce",
+    "pl": "saĹ‚ata"
+  },
+  {
+    "en": "spinach",
+    "pl": "szpinak"
+  },
+  {
+    "en": "broccoli",
+    "pl": "brokuĹ‚"
+  },
+  {
+    "en": "cauliflower",
+    "pl": "kalafior"
+  },
+  {
+    "en": "pepper",
+    "pl": "papryka"
+  },
+  {
+    "en": "pumpkin",
+    "pl": "dynia"
+  },
+  {
+    "en": "zucchini",
+    "pl": "cukinia"
+  },
+  {
+    "en": "beetroot",
+    "pl": "burak"
+  },
+  {
+    "en": "radish",
+    "pl": "rzodkiewka"
+  },
+  {
+    "en": "parsley",
+    "pl": "pietruszka"
+  },
+  {
+    "en": "celery",
+    "pl": "seler"
+  },
+  {
+    "en": "leek",
+    "pl": "por"
+  },
+  {
+    "en": "eggplant",
+    "pl": "bakĹ‚aĹĽan"
+  },
+  {
+    "en": "bean",
+    "pl": "fasola"
+  },
+  {
+    "en": "pea",
+    "pl": "groszek"
+  },
+  {
+    "en": "corn",
+    "pl": "kukurydza"
+  },
+  {
+    "en": "lentil",
+    "pl": "soczewica"
+  },
+  {
+    "en": "chickpea",
+    "pl": "ciecierzyca"
+  },
+  {
+    "en": "rice",
+    "pl": "ryĹĽ"
+  },
+  {
+    "en": "wheat",
+    "pl": "pszenica"
+  },
+  {
+    "en": "oat",
+    "pl": "owies"
+  },
+  {
+    "en": "barley",
+    "pl": "jÄ™czmieĹ„"
+  },
+  {
+    "en": "rye",
+    "pl": "ĹĽyto"
+  },
+  {
+    "en": "bread",
+    "pl": "chleb"
+  },
+  {
+    "en": "butter",
+    "pl": "masĹ‚o"
+  },
+  {
+    "en": "cheese",
+    "pl": "ser"
+  },
+  {
+    "en": "yogurt",
+    "pl": "jogurt"
+  },
+  {
+    "en": "milk",
+    "pl": "mleko"
+  },
+  {
+    "en": "cream",
+    "pl": "Ĺ›mietana"
+  },
+  {
+    "en": "egg",
+    "pl": "jajko"
+  },
+  {
+    "en": "chicken",
+    "pl": "kurczak"
+  },
+  {
+    "en": "beef",
+    "pl": "woĹ‚owina"
+  },
+  {
+    "en": "pork",
+    "pl": "wieprzowina"
+  },
+  {
+    "en": "lamb",
+    "pl": "jagniÄ™cina"
+  },
+  {
+    "en": "ham",
+    "pl": "szynka"
+  },
+  {
+    "en": "sausage",
+    "pl": "kieĹ‚basa"
+  },
+  {
+    "en": "fish",
+    "pl": "ryba"
+  },
+  {
+    "en": "salmon",
+    "pl": "Ĺ‚osoĹ›"
+  },
+  {
+    "en": "trout",
+    "pl": "pstrÄ…g"
+  },
+  {
+    "en": "herring",
+    "pl": "Ĺ›ledĹş"
+  },
+  {
+    "en": "shrimp",
+    "pl": "krewetka"
+  },
+  {
+    "en": "crab",
+    "pl": "krab"
+  },
+  {
+    "en": "lobster",
+    "pl": "homar"
+  },
+  {
+    "en": "mussel",
+    "pl": "maĹ‚ĹĽa"
+  },
+  {
+    "en": "oyster",
+    "pl": "ostryga"
+  },
+  {
+    "en": "breadroll",
+    "pl": "buĹ‚ka"
+  },
+  {
+    "en": "cake",
+    "pl": "ciasto"
+  },
+  {
+    "en": "cookie",
+    "pl": "ciastko"
+  },
+  {
+    "en": "pie",
+    "pl": "tarta"
+  },
+  {
+    "en": "sugar",
+    "pl": "cukier"
+  },
+  {
+    "en": "salt",
+    "pl": "sĂłl"
+  },
+  {
+    "en": "peppercorn",
+    "pl": "pieprz"
+  },
+  {
+    "en": "spice",
+    "pl": "przyprawa"
+  },
+  {
+    "en": "herb",
+    "pl": "zioĹ‚o"
+  },
+  {
+    "en": "basil",
+    "pl": "bazylia"
+  },
+  {
+    "en": "oregano",
+    "pl": "oregano"
+  },
+  {
+    "en": "rosemary",
+    "pl": "rozmaryn"
+  },
+  {
+    "en": "thyme",
+    "pl": "tymianek"
+  },
+  {
+    "en": "mint",
+    "pl": "miÄ™ta"
+  },
+  {
+    "en": "cinnamon",
+    "pl": "cynamon"
+  },
+  {
+    "en": "vanilla",
+    "pl": "wanilia"
+  },
+  {
+    "en": "honey",
+    "pl": "miĂłd"
+  },
+  {
+    "en": "jam",
+    "pl": "dĹĽem"
+  },
+  {
+    "en": "soup",
+    "pl": "zupa"
+  },
+  {
+    "en": "salad",
+    "pl": "saĹ‚atka"
+  },
+  {
+    "en": "breakfast",
+    "pl": "Ĺ›niadanie"
+  },
+  {
+    "en": "lunch",
+    "pl": "lunch"
+  },
+  {
+    "en": "dinner",
+    "pl": "obiad"
+  },
+  {
+    "en": "snack",
+    "pl": "przekÄ…ska"
+  },
+  {
+    "en": "dessert",
+    "pl": "deser"
+  },
+  {
+    "en": "water",
+    "pl": "woda"
+  },
+  {
+    "en": "juice",
+    "pl": "sok"
+  },
+  {
+    "en": "tea",
+    "pl": "herbata"
+  },
+  {
+    "en": "coffee",
+    "pl": "kawa"
+  },
+  {
+    "en": "beer",
+    "pl": "piwo"
+  },
+  {
+    "en": "wine",
+    "pl": "wino"
+  },
+  {
+    "en": "soda",
+    "pl": "napĂłj gazowany"
+  },
+  {
+    "en": "animal",
+    "pl": "zwierzÄ™"
+  },
+  {
+    "en": "dog",
+    "pl": "pies"
+  },
+  {
+    "en": "cat",
+    "pl": "kot"
+  },
+  {
+    "en": "horse",
+    "pl": "koĹ„"
+  },
+  {
+    "en": "cow",
+    "pl": "krowa"
+  },
+  {
+    "en": "pig",
+    "pl": "Ĺ›winia"
+  },
+  {
+    "en": "sheep",
+    "pl": "owca"
+  },
+  {
+    "en": "goat",
+    "pl": "koza"
+  },
+  {
+    "en": "rabbit",
+    "pl": "krĂłlik"
+  },
+  {
+    "en": "fox",
+    "pl": "lis"
+  },
+  {
+    "en": "wolf",
+    "pl": "wilk"
+  },
+  {
+    "en": "bear",
+    "pl": "niedĹşwiedĹş"
+  },
+  {
+    "en": "lion",
+    "pl": "lew"
+  },
+  {
+    "en": "tiger",
+    "pl": "tygrys"
+  },
+  {
+    "en": "monkey",
+    "pl": "maĹ‚pa"
+  },
+  {
+    "en": "elephant",
+    "pl": "sĹ‚oĹ„"
+  },
+  {
+    "en": "giraffe",
+    "pl": "ĹĽyrafa"
+  },
+  {
+    "en": "zebra",
+    "pl": "zebra"
+  },
+  {
+    "en": "kangaroo",
+    "pl": "kangur"
+  },
+  {
+    "en": "koala",
+    "pl": "koala"
+  },
+  {
+    "en": "panda",
+    "pl": "panda"
+  },
+  {
+    "en": "camel",
+    "pl": "wielbĹ‚Ä…d"
+  },
+  {
+    "en": "squirrel",
+    "pl": "wiewiĂłrka"
+  },
+  {
+    "en": "mouse",
+    "pl": "mysz"
+  },
+  {
+    "en": "rat",
+    "pl": "szczur"
+  },
+  {
+    "en": "hedgehog",
+    "pl": "jeĹĽ"
+  },
+  {
+    "en": "badger",
+    "pl": "borsuk"
+  },
+  {
+    "en": "beaver",
+    "pl": "bĂłbr"
+  },
+  {
+    "en": "otter",
+    "pl": "wydra"
+  },
+  {
+    "en": "deer",
+    "pl": "jeleĹ„"
+  },
+  {
+    "en": "elk",
+    "pl": "Ĺ‚oĹ›"
+  },
+  {
+    "en": "boar",
+    "pl": "dzik"
+  },
+  {
+    "en": "bird",
+    "pl": "ptak"
+  },
+  {
+    "en": "eagle",
+    "pl": "orzeĹ‚"
+  },
+  {
+    "en": "hawk",
+    "pl": "jastrzÄ…b"
+  },
+  {
+    "en": "owl",
+    "pl": "sowa"
+  },
+  {
+    "en": "sparrow",
+    "pl": "wrĂłbel"
+  },
+  {
+    "en": "pigeon",
+    "pl": "goĹ‚Ä…b"
+  },
+  {
+    "en": "duck",
+    "pl": "kaczka"
+  },
+  {
+    "en": "goose",
+    "pl": "gÄ™Ĺ›"
+  },
+  {
+    "en": "swan",
+    "pl": "Ĺ‚abÄ™dĹş"
+  },
+  {
+    "en": "stork",
+    "pl": "bocian"
+  },
+  {
+    "en": "peacock",
+    "pl": "paw"
+  },
+  {
+    "en": "rooster",
+    "pl": "kogut"
+  },
+  {
+    "en": "hen",
+    "pl": "kura"
+  },
+  {
+    "en": "chick",
+    "pl": "pisklÄ™"
+  },
+  {
+    "en": "butterfly",
+    "pl": "motyl"
+  },
+  {
+    "en": "bee",
+    "pl": "pszczoĹ‚a"
+  },
+  {
+    "en": "wasp",
+    "pl": "osa"
+  },
+  {
+    "en": "ant",
+    "pl": "mrĂłwka"
+  },
+  {
+    "en": "beetle",
+    "pl": "chrzÄ…szcz"
+  },
+  {
+    "en": "ladybug",
+    "pl": "biedronka"
+  },
+  {
+    "en": "fly",
+    "pl": "mucha"
+  },
+  {
+    "en": "mosquito",
+    "pl": "komar"
+  },
+  {
+    "en": "spider",
+    "pl": "pajÄ…k"
+  },
+  {
+    "en": "worm",
+    "pl": "robak"
+  },
+  {
+    "en": "forest",
+    "pl": "las"
+  },
+  {
+    "en": "tree",
+    "pl": "drzewo"
+  },
+  {
+    "en": "bush",
+    "pl": "krzew"
+  },
+  {
+    "en": "flower",
+    "pl": "kwiat"
+  },
+  {
+    "en": "leaf",
+    "pl": "liĹ›Ä‡"
+  },
+  {
+    "en": "root",
+    "pl": "korzeĹ„"
+  },
+  {
+    "en": "branch",
+    "pl": "gaĹ‚Ä…Ĺş"
+  },
+  {
+    "en": "trunk",
+    "pl": "pieĹ„"
+  },
+  {
+    "en": "bark",
+    "pl": "kora"
+  },
+  {
+    "en": "seed",
+    "pl": "nasiono"
+  },
+  {
+    "en": "soil",
+    "pl": "gleba"
+  },
+  {
+    "en": "stone",
+    "pl": "kamieĹ„"
+  },
+  {
+    "en": "rock",
+    "pl": "skaĹ‚a"
+  },
+  {
+    "en": "mountain",
+    "pl": "gĂłra"
+  },
+  {
+    "en": "hill",
+    "pl": "wzgĂłrze"
+  },
+  {
+    "en": "valley",
+    "pl": "dolina"
+  },
+  {
+    "en": "plain",
+    "pl": "rĂłwnina"
+  },
+  {
+    "en": "river",
+    "pl": "rzeka"
+  },
+  {
+    "en": "stream",
+    "pl": "strumieĹ„"
+  },
+  {
+    "en": "lake",
+    "pl": "jezioro"
+  },
+  {
+    "en": "sea",
+    "pl": "morze"
+  },
+  {
+    "en": "ocean",
+    "pl": "ocean"
+  },
+  {
+    "en": "waterfall",
+    "pl": "wodospad"
+  },
+  {
+    "en": "cave",
+    "pl": "jaskinia"
+  },
+  {
+    "en": "desert",
+    "pl": "pustynia"
+  },
+  {
+    "en": "beach",
+    "pl": "plaĹĽa"
+  },
+  {
+    "en": "coast",
+    "pl": "wybrzeĹĽe"
+  },
+  {
+    "en": "island",
+    "pl": "wyspa"
+  },
+  {
+    "en": "peninsula",
+    "pl": "pĂłĹ‚wysep"
+  },
+  {
+    "en": "rain",
+    "pl": "deszcz"
+  },
+  {
+    "en": "snow",
+    "pl": "Ĺ›nieg"
+  },
+  {
+    "en": "hail",
+    "pl": "grad"
+  },
+  {
+    "en": "fog",
+    "pl": "mgĹ‚a"
+  },
+  {
+    "en": "cloud",
+    "pl": "chmura"
+  },
+  {
+    "en": "sky",
+    "pl": "niebo"
+  },
+  {
+    "en": "sun",
+    "pl": "sĹ‚oĹ„ce"
+  },
+  {
+    "en": "moon",
+    "pl": "ksiÄ™ĹĽyc"
+  },
+  {
+    "en": "star",
+    "pl": "gwiazda"
+  },
+  {
+    "en": "wind",
+    "pl": "wiatr"
+  },
+  {
+    "en": "storm",
+    "pl": "burza"
+  },
+  {
+    "en": "thunder",
+    "pl": "grzmot"
+  },
+  {
+    "en": "lightning",
+    "pl": "bĹ‚yskawica"
+  },
+  {
+    "en": "rainbow",
+    "pl": "tÄ™cza"
+  },
+  {
+    "en": "climate",
+    "pl": "klimat"
+  },
+  {
+    "en": "weather",
+    "pl": "pogoda"
+  },
+  {
+    "en": "temperature",
+    "pl": "temperatura"
+  },
+  {
+    "en": "season",
+    "pl": "pora roku"
+  },
+  {
+    "en": "spring",
+    "pl": "wiosna"
+  },
+  {
+    "en": "summer",
+    "pl": "lato"
+  },
+  {
+    "en": "autumn",
+    "pl": "jesieĹ„"
+  },
+  {
+    "en": "winter",
+    "pl": "zima"
+  },
+  {
+    "en": "north",
+    "pl": "pĂłĹ‚noc"
+  },
+  {
+    "en": "south",
+    "pl": "poĹ‚udnie"
+  },
+  {
+    "en": "east",
+    "pl": "wschĂłd"
+  },
+  {
+    "en": "west",
+    "pl": "zachĂłd"
+  },
+  {
+    "en": "compass",
+    "pl": "kompas"
+  },
+  {
+    "en": "map",
+    "pl": "mapa"
+  },
+  {
+    "en": "city",
+    "pl": "miasto"
+  },
+  {
+    "en": "town",
+    "pl": "miasteczko"
+  },
+  {
+    "en": "village",
+    "pl": "wieĹ›"
+  },
+  {
+    "en": "street",
+    "pl": "ulica"
+  },
+  {
+    "en": "road",
+    "pl": "droga"
+  },
+  {
+    "en": "square",
+    "pl": "plac"
+  },
+  {
+    "en": "bridge",
+    "pl": "most"
+  },
+  {
+    "en": "park",
+    "pl": "park"
+  },
+  {
+    "en": "garden",
+    "pl": "ogrĂłd"
+  },
+  {
+    "en": "playground",
+    "pl": "plac zabaw"
+  },
+  {
+    "en": "school",
+    "pl": "szkoĹ‚a"
+  },
+  {
+    "en": "hospital",
+    "pl": "szpital"
+  },
+  {
+    "en": "library",
+    "pl": "biblioteka"
+  },
+  {
+    "en": "museum",
+    "pl": "muzeum"
+  },
+  {
+    "en": "theater",
+    "pl": "teatr"
+  },
+  {
+    "en": "cinema",
+    "pl": "kino"
+  },
+  {
+    "en": "restaurant",
+    "pl": "restauracja"
+  },
+  {
+    "en": "cafe",
+    "pl": "kawiarnia"
+  },
+  {
+    "en": "shop",
+    "pl": "sklep"
+  },
+  {
+    "en": "market",
+    "pl": "targ"
+  },
+  {
+    "en": "station",
+    "pl": "dworzec"
+  },
+  {
+    "en": "airport",
+    "pl": "lotnisko"
+  },
+  {
+    "en": "harbor",
+    "pl": "port"
+  },
+  {
+    "en": "building",
+    "pl": "budynek"
+  },
+  {
+    "en": "house",
+    "pl": "dom"
+  },
+  {
+    "en": "apartment",
+    "pl": "mieszkanie"
+  },
+  {
+    "en": "room",
+    "pl": "pokĂłj"
+  },
+  {
+    "en": "kitchen",
+    "pl": "kuchnia"
+  },
+  {
+    "en": "bathroom",
+    "pl": "Ĺ‚azienka"
+  },
+  {
+    "en": "bedroom",
+    "pl": "sypialnia"
+  },
+  {
+    "en": "livingroom",
+    "pl": "salon"
+  },
+  {
+    "en": "attic",
+    "pl": "strych"
+  },
+  {
+    "en": "basement",
+    "pl": "piwnica"
+  },
+  {
+    "en": "roof",
+    "pl": "dach"
+  },
+  {
+    "en": "wall",
+    "pl": "Ĺ›ciana"
+  },
+  {
+    "en": "door",
+    "pl": "drzwi"
+  },
+  {
+    "en": "window",
+    "pl": "okno"
+  },
+  {
+    "en": "floor",
+    "pl": "podĹ‚oga"
+  },
+  {
+    "en": "ceiling",
+    "pl": "sufit"
+  },
+  {
+    "en": "stairs",
+    "pl": "schody"
+  },
+  {
+    "en": "elevator",
+    "pl": "winda"
+  },
+  {
+    "en": "balcony",
+    "pl": "balkon"
+  },
+  {
+    "en": "garage",
+    "pl": "garaĹĽ"
+  },
+  {
+    "en": "furniture",
+    "pl": "meble"
+  },
+  {
+    "en": "chair",
+    "pl": "krzesĹ‚o"
+  },
+  {
+    "en": "armchair",
+    "pl": "fotel"
+  },
+  {
+    "en": "sofa",
+    "pl": "kanapa"
+  },
+  {
+    "en": "table",
+    "pl": "stĂłĹ‚"
+  },
+  {
+    "en": "desk",
+    "pl": "biurko"
+  },
+  {
+    "en": "bed",
+    "pl": "Ĺ‚ĂłĹĽko"
+  },
+  {
+    "en": "wardrobe",
+    "pl": "szafa"
+  },
+  {
+    "en": "shelf",
+    "pl": "pĂłĹ‚ka"
+  },
+  {
+    "en": "cabinet",
+    "pl": "szafka"
+  },
+  {
+    "en": "lamp",
+    "pl": "lampa"
+  },
+  {
+    "en": "carpet",
+    "pl": "dywan"
+  },
+  {
+    "en": "curtain",
+    "pl": "zasĹ‚ona"
+  },
+  {
+    "en": "mirror",
+    "pl": "lustro"
+  },
+  {
+    "en": "clock",
+    "pl": "zegar"
+  },
+  {
+    "en": "picture",
+    "pl": "obraz"
+  },
+  {
+    "en": "television",
+    "pl": "telewizor"
+  },
+  {
+    "en": "computer",
+    "pl": "komputer"
+  },
+  {
+    "en": "laptop",
+    "pl": "laptop"
+  },
+  {
+    "en": "keyboard",
+    "pl": "klawiatura"
+  },
+  {
+    "en": "mouse_device",
+    "pl": "myszka"
+  },
+  {
+    "en": "monitor",
+    "pl": "monitor"
+  },
+  {
+    "en": "printer",
+    "pl": "drukarka"
+  },
+  {
+    "en": "router",
+    "pl": "router"
+  },
+  {
+    "en": "smartphone",
+    "pl": "smartfon"
+  },
+  {
+    "en": "tablet",
+    "pl": "tablet"
+  },
+  {
+    "en": "camera",
+    "pl": "aparat"
+  },
+  {
+    "en": "headphones",
+    "pl": "sĹ‚uchawki"
+  },
+  {
+    "en": "microphone",
+    "pl": "mikrofon"
+  },
+  {
+    "en": "speaker",
+    "pl": "gĹ‚oĹ›nik"
+  },
+  {
+    "en": "battery",
+    "pl": "bateria"
+  },
+  {
+    "en": "charger",
+    "pl": "Ĺ‚adowarka"
+  },
+  {
+    "en": "cable",
+    "pl": "kabel"
+  },
+  {
+    "en": "plug",
+    "pl": "wtyczka"
+  },
+  {
+    "en": "socket",
+    "pl": "gniazdko"
+  },
+  {
+    "en": "internet",
+    "pl": "internet"
+  },
+  {
+    "en": "website",
+    "pl": "strona internetowa"
+  },
+  {
+    "en": "password",
+    "pl": "hasĹ‚o"
+  },
+  {
+    "en": "software",
+    "pl": "oprogramowanie"
+  },
+  {
+    "en": "hardware",
+    "pl": "sprzÄ™t"
+  },
+  {
+    "en": "update",
+    "pl": "aktualizacja"
+  },
+  {
+    "en": "backup",
+    "pl": "kopia zapasowa"
+  },
+  {
+    "en": "cloud",
+    "pl": "chmura danych"
+  },
+  {
+    "en": "server",
+    "pl": "serwer"
+  },
+  {
+    "en": "network",
+    "pl": "sieÄ‡"
+  },
+  {
+    "en": "database",
+    "pl": "baza danych"
+  },
+  {
+    "en": "file",
+    "pl": "plik"
+  },
+  {
+    "en": "folder",
+    "pl": "folder"
+  },
+  {
+    "en": "settings",
+    "pl": "ustawienia"
+  },
+  {
+    "en": "message",
+    "pl": "wiadomoĹ›Ä‡"
+  },
+  {
+    "en": "notification",
+    "pl": "powiadomienie"
+  },
+  {
+    "en": "user",
+    "pl": "uĹĽytkownik"
+  },
+  {
+    "en": "account",
+    "pl": "konto"
+  },
+  {
+    "en": "profile",
+    "pl": "profil"
+  },
+  {
+    "en": "privacy",
+    "pl": "prywatnoĹ›Ä‡"
+  },
+  {
+    "en": "security",
+    "pl": "bezpieczeĹ„stwo"
+  },
+  {
+    "en": "algorithm",
+    "pl": "algorytm"
+  },
+  {
+    "en": "robot",
+    "pl": "robot"
+  },
+  {
+    "en": "machine",
+    "pl": "maszyna"
+  },
+  {
+    "en": "vehicle",
+    "pl": "pojazd"
+  },
+  {
+    "en": "car",
+    "pl": "samochĂłd"
+  },
+  {
+    "en": "bus",
+    "pl": "autobus"
+  },
+  {
+    "en": "tram",
+    "pl": "tramwaj"
+  },
+  {
+    "en": "train",
+    "pl": "pociÄ…g"
+  },
+  {
+    "en": "subway",
+    "pl": "metro"
+  },
+  {
+    "en": "bicycle",
+    "pl": "rower"
+  },
+  {
+    "en": "scooter",
+    "pl": "hulajnoga"
+  },
+  {
+    "en": "motorcycle",
+    "pl": "motocykl"
+  },
+  {
+    "en": "truck",
+    "pl": "ciÄ™ĹĽarĂłwka"
+  },
+  {
+    "en": "ship",
+    "pl": "statek"
+  },
+  {
+    "en": "boat",
+    "pl": "Ĺ‚ĂłdĹş"
+  },
+  {
+    "en": "plane",
+    "pl": "samolot"
+  },
+  {
+    "en": "helicopter",
+    "pl": "helikopter"
+  },
+  {
+    "en": "rocket",
+    "pl": "rakieta"
+  },
+  {
+    "en": "passport",
+    "pl": "paszport"
+  },
+  {
+    "en": "ticket",
+    "pl": "bilet"
+  },
+  {
+    "en": "luggage",
+    "pl": "bagaĹĽ"
+  },
+  {
+    "en": "suitcase",
+    "pl": "walizka"
+  },
+  {
+    "en": "backpack",
+    "pl": "plecak"
+  },
+  {
+    "en": "hotel",
+    "pl": "hotel"
+  },
+  {
+    "en": "reservation",
+    "pl": "rezerwacja"
+  },
+  {
+    "en": "checkin",
+    "pl": "zameldowanie"
+  },
+  {
+    "en": "checkout",
+    "pl": "wymeldowanie"
+  },
+  {
+    "en": "tourist",
+    "pl": "turysta"
+  },
+  {
+    "en": "guide",
+    "pl": "przewodnik"
+  },
+  {
+    "en": "maple",
+    "pl": "klon"
+  },
+  {
+    "en": "birch",
+    "pl": "brzoza"
+  },
+  {
+    "en": "pine",
+    "pl": "sosna"
+  },
+  {
+    "en": "spruce",
+    "pl": "Ĺ›wierk"
+  },
+  {
+    "en": "fir",
+    "pl": "jodĹ‚a"
+  },
+  {
+    "en": "cedar",
+    "pl": "cedr"
+  },
+  {
+    "en": "willow",
+    "pl": "wierzba"
+  },
+  {
+    "en": "poplar",
+    "pl": "topola"
+  },
+  {
+    "en": "ash",
+    "pl": "jesion"
+  },
+  {
+    "en": "hazel",
+    "pl": "leszczyna"
+  },
+  {
+    "en": "elder",
+    "pl": "bez"
+  },
+  {
+    "en": "chestnut",
+    "pl": "kasztanowiec"
+  },
+  {
+    "en": "walnut",
+    "pl": "orzech wĹ‚oski"
+  },
+  {
+    "en": "acorn",
+    "pl": "ĹĽoĹ‚Ä…dĹş"
+  },
+  {
+    "en": "mushroom",
+    "pl": "grzyb"
+  },
+  {
+    "en": "berry",
+    "pl": "jagoda"
+  },
+  {
+    "en": "heron",
+    "pl": "czapla"
+  },
+  {
+    "en": "seagull",
+    "pl": "mewa"
+  },
+  {
+    "en": "shark",
+    "pl": "rekin"
+  },
+  {
+    "en": "dolphin",
+    "pl": "delfin"
+  },
+  {
+    "en": "whale",
+    "pl": "wieloryb"
+  },
+  {
+    "en": "seal",
+    "pl": "foka"
+  },
+  {
+    "en": "penguin",
+    "pl": "pingwin"
+  },
+  {
+    "en": "polar_bear",
+    "pl": "niedĹşwiedĹş polarny"
+  },
+  {
+    "en": "reef",
+    "pl": "rafa"
+  },
+  {
+    "en": "coral",
+    "pl": "koral"
+  },
+  {
+    "en": "octopus",
+    "pl": "oĹ›miornica"
+  },
+  {
+    "en": "jellyfish",
+    "pl": "meduza"
+  },
+  {
+    "en": "turtle",
+    "pl": "ĹĽĂłĹ‚w"
+  },
+  {
+    "en": "seahorse",
+    "pl": "konik morski"
+  },
+  {
+    "en": "clam",
+    "pl": "maĹ‚ĹĽ"
+  },
+  {
+    "en": "kelp",
+    "pl": "wodorost"
+  },
+  {
+    "en": "seaweed",
+    "pl": "glon"
+  },
+  {
+    "en": "algae",
+    "pl": "alga"
+  },
+  {
+    "en": "barnacle",
+    "pl": "pÄ…kla"
+  },
+  {
+    "en": "plankton",
+    "pl": "plankton"
+  },
+  {
+    "en": "harvest",
+    "pl": "ĹĽniwa"
+  },
+  {
+    "en": "farmer",
+    "pl": "rolnik"
+  },
+  {
+    "en": "tractor",
+    "pl": "ciÄ…gnik"
+  },
+  {
+    "en": "field",
+    "pl": "pole"
+  },
+  {
+    "en": "grain",
+    "pl": "zboĹĽe"
+  },
+  {
+    "en": "hay",
+    "pl": "siano"
+  },
+  {
+    "en": "barn",
+    "pl": "stodoĹ‚a"
+  },
+  {
+    "en": "stable",
+    "pl": "stajnia"
+  },
+  {
+    "en": "coop",
+    "pl": "kurnik"
+  },
+  {
+    "en": "pasture",
+    "pl": "pastwisko"
+  },
+  {
+    "en": "fence",
+    "pl": "pĹ‚ot"
+  },
+  {
+    "en": "tool",
+    "pl": "narzÄ™dzie"
+  },
+  {
+    "en": "hammer",
+    "pl": "mĹ‚otek"
+  },
+  {
+    "en": "screwdriver",
+    "pl": "Ĺ›rubokrÄ™t"
+  },
+  {
+    "en": "wrench",
+    "pl": "klucz"
+  },
+  {
+    "en": "pliers",
+    "pl": "szczypce"
+  },
+  {
+    "en": "saw",
+    "pl": "piĹ‚a"
+  },
+  {
+    "en": "drill",
+    "pl": "wiertarka"
+  },
+  {
+    "en": "nail",
+    "pl": "gwĂłĹşdĹş"
+  },
+  {
+    "en": "screw",
+    "pl": "Ĺ›ruba"
+  },
+  {
+    "en": "bolt",
+    "pl": "Ĺ›ruba z nakrÄ™tkÄ…"
+  },
+  {
+    "en": "nut",
+    "pl": "nakrÄ™tka"
+  },
+  {
+    "en": "glove",
+    "pl": "rÄ™kawica"
+  },
+  {
+    "en": "goggles",
+    "pl": "gogle"
+  },
+  {
+    "en": "helmet",
+    "pl": "kask"
+  },
+  {
+    "en": "safety",
+    "pl": "bezpieczeĹ„stwo"
+  },
+  {
+    "en": "measure",
+    "pl": "miarka"
+  },
+  {
+    "en": "level",
+    "pl": "poziomica"
+  },
+  {
+    "en": "tape",
+    "pl": "taĹ›ma"
+  },
+  {
+    "en": "paint",
+    "pl": "farba"
+  },
+  {
+    "en": "brush",
+    "pl": "pÄ™dzel"
+  },
+  {
+    "en": "roller",
+    "pl": "waĹ‚ek"
+  },
+  {
+    "en": "bucket",
+    "pl": "wiadro"
+  },
+  {
+    "en": "ladder",
+    "pl": "drabina"
+  },
+  {
+    "en": "cement",
+    "pl": "cement"
+  },
+  {
+    "en": "brick",
+    "pl": "cegĹ‚a"
+  },
+  {
+    "en": "sand",
+    "pl": "piasek"
+  },
+  {
+    "en": "gravel",
+    "pl": "ĹĽwir"
+  },
+  {
+    "en": "concrete",
+    "pl": "beton"
+  },
+  {
+    "en": "steel",
+    "pl": "stal"
+  },
+  {
+    "en": "wood",
+    "pl": "drewno"
+  },
+  {
+    "en": "plastic",
+    "pl": "plastik"
+  },
+  {
+    "en": "glass",
+    "pl": "szkĹ‚o"
+  },
+  {
+    "en": "paper",
+    "pl": "papier"
+  },
+  {
+    "en": "cardboard",
+    "pl": "tektura"
+  },
+  {
+    "en": "rubber",
+    "pl": "guma"
+  },
+  {
+    "en": "cotton",
+    "pl": "baweĹ‚na"
+  },
+  {
+    "en": "wool",
+    "pl": "weĹ‚na"
+  },
+  {
+    "en": "silk",
+    "pl": "jedwab"
+  },
+  {
+    "en": "leather",
+    "pl": "skĂłra"
+  },
+  {
+    "en": "fabric",
+    "pl": "tkanina"
+  },
+  {
+    "en": "thread",
+    "pl": "niÄ‡"
+  },
+  {
+    "en": "needle",
+    "pl": "igĹ‚a"
+  },
+  {
+    "en": "scissors",
+    "pl": "noĹĽyczki"
+  },
+  {
+    "en": "button",
+    "pl": "guzik"
+  },
+  {
+    "en": "zipper",
+    "pl": "zamek"
+  },
+  {
+    "en": "sewing",
+    "pl": "szycie"
+  },
+  {
+    "en": "pattern",
+    "pl": "wykrĂłj"
+  },
+  {
+    "en": "notebook",
+    "pl": "notes"
+  },
+  {
+    "en": "pen",
+    "pl": "dĹ‚ugopis"
+  },
+  {
+    "en": "pencil",
+    "pl": "oĹ‚Ăłwek"
+  },
+  {
+    "en": "marker",
+    "pl": "marker"
+  },
+  {
+    "en": "eraser",
+    "pl": "gumka"
+  },
+  {
+    "en": "sharpener",
+    "pl": "temperĂłwka"
+  },
+  {
+    "en": "ruler",
+    "pl": "linijka"
+  },
+  {
+    "en": "calculator",
+    "pl": "kalkulator"
+  },
+  {
+    "en": "paperclip",
+    "pl": "spinacz"
+  },
+  {
+    "en": "envelope",
+    "pl": "koperta"
+  },
+  {
+    "en": "stamp",
+    "pl": "znaczek"
+  },
+  {
+    "en": "mailbox",
+    "pl": "skrzynka pocztowa"
+  },
+  {
+    "en": "package",
+    "pl": "paczka"
+  },
+  {
+    "en": "parcel",
+    "pl": "przesyĹ‚ka"
+  },
+  {
+    "en": "postman",
+    "pl": "listonosz"
+  },
+  {
+    "en": "letter",
+    "pl": "list"
+  },
+  {
+    "en": "calendar",
+    "pl": "kalendarz"
+  },
+  {
+    "en": "schedule",
+    "pl": "grafik"
+  },
+  {
+    "en": "meeting",
+    "pl": "spotkanie"
+  },
+  {
+    "en": "appointment",
+    "pl": "wizyta"
+  },
+  {
+    "en": "deadline",
+    "pl": "termin"
+  },
+  {
+    "en": "project",
+    "pl": "projekt"
+  },
+  {
+    "en": "task",
+    "pl": "zadanie"
+  },
+  {
+    "en": "note",
+    "pl": "notatka"
+  },
+  {
+    "en": "idea",
+    "pl": "pomysĹ‚"
+  },
+  {
+    "en": "plan",
+    "pl": "plan"
+  },
+  {
+    "en": "strategy",
+    "pl": "strategia"
+  },
+  {
+    "en": "goal",
+    "pl": "cel"
+  },
+  {
+    "en": "success",
+    "pl": "sukces"
+  },
+  {
+    "en": "failure",
+    "pl": "poraĹĽka"
+  },
+  {
+    "en": "progress",
+    "pl": "postÄ™p"
+  },
+  {
+    "en": "improvement",
+    "pl": "poprawa"
+  },
+  {
+    "en": "innovation",
+    "pl": "innowacja"
+  },
+  {
+    "en": "motivation",
+    "pl": "motywacja"
+  },
+  {
+    "en": "focus",
+    "pl": "koncentracja"
+  },
+  {
+    "en": "team",
+    "pl": "zespĂłĹ‚"
+  },
+  {
+    "en": "leader",
+    "pl": "lider"
+  },
+  {
+    "en": "manager",
+    "pl": "menedĹĽer"
+  },
+  {
+    "en": "employee",
+    "pl": "pracownik"
+  },
+  {
+    "en": "colleague",
+    "pl": "kolega z pracy"
+  },
+  {
+    "en": "customer",
+    "pl": "klient"
+  },
+  {
+    "en": "partner",
+    "pl": "partner"
+  },
+  {
+    "en": "contract",
+    "pl": "kontrakt"
+  },
+  {
+    "en": "invoice",
+    "pl": "faktura"
+  },
+  {
+    "en": "budget",
+    "pl": "budĹĽet"
+  },
+  {
+    "en": "finance",
+    "pl": "finanse"
+  },
+  {
+    "en": "investment",
+    "pl": "inwestycja"
+  },
+  {
+    "en": "profit",
+    "pl": "zysk"
+  },
+  {
+    "en": "loss",
+    "pl": "strata"
+  },
+  {
+    "en": "market",
+    "pl": "rynek"
+  },
+  {
+    "en": "supply",
+    "pl": "podaĹĽ"
+  },
+  {
+    "en": "demand",
+    "pl": "popyt"
+  },
+  {
+    "en": "price",
+    "pl": "cena"
+  },
+  {
+    "en": "value",
+    "pl": "wartoĹ›Ä‡"
+  },
+  {
+    "en": "data",
+    "pl": "dane"
+  },
+  {
+    "en": "analysis",
+    "pl": "analiza"
+  },
+  {
+    "en": "report",
+    "pl": "raport"
+  },
+  {
+    "en": "risk",
+    "pl": "ryzyko"
+  },
+  {
+    "en": "policy",
+    "pl": "polityka"
+  },
+  {
+    "en": "regulation",
+    "pl": "regulacja"
+  },
+  {
+    "en": "law",
+    "pl": "prawo"
+  },
+  {
+    "en": "justice",
+    "pl": "sprawiedliwoĹ›Ä‡"
+  },
+  {
+    "en": "court",
+    "pl": "sÄ…d"
+  },
+  {
+    "en": "judge",
+    "pl": "sÄ™dzia"
+  },
+  {
+    "en": "lawyer",
+    "pl": "prawnik"
+  },
+  {
+    "en": "police",
+    "pl": "policja"
+  },
+  {
+    "en": "firefighter",
+    "pl": "straĹĽak"
+  },
+  {
+    "en": "doctor",
+    "pl": "lekarz"
+  },
+  {
+    "en": "nurse",
+    "pl": "pielÄ™gniarka"
+  },
+  {
+    "en": "scientist",
+    "pl": "naukowiec"
+  },
+  {
+    "en": "engineer",
+    "pl": "inĹĽynier"
+  },
+  {
+    "en": "architect",
+    "pl": "architekt"
+  },
+  {
+    "en": "artist",
+    "pl": "artysta"
+  },
+  {
+    "en": "musician",
+    "pl": "muzyk"
+  },
+  {
+    "en": "writer",
+    "pl": "pisarz"
+  },
+  {
+    "en": "journalist",
+    "pl": "dziennikarz"
+  },
+  {
+    "en": "photographer",
+    "pl": "fotograf"
+  },
+  {
+    "en": "teacher",
+    "pl": "nauczyciel"
+  },
+  {
+    "en": "student",
+    "pl": "student"
+  },
+  {
+    "en": "athlete",
+    "pl": "sportowiec"
+  },
+  {
+    "en": "coach",
+    "pl": "trener"
+  },
+  {
+    "en": "chef",
+    "pl": "szef kuchni"
+  },
+  {
+    "en": "waiter",
+    "pl": "kelner"
+  },
+  {
+    "en": "barista",
+    "pl": "barista"
+  },
+  {
+    "en": "cashier",
+    "pl": "kasjer"
+  },
+  {
+    "en": "mechanic",
+    "pl": "mechanik"
+  },
+  {
+    "en": "electrician",
+    "pl": "elektryk"
+  },
+  {
+    "en": "plumber",
+    "pl": "hydraulik"
+  },
+  {
+    "en": "carpenter",
+    "pl": "stolarz"
+  },
+  {
+    "en": "smith",
+    "pl": "kowal"
+  },
+  {
+    "en": "tailor",
+    "pl": "krawiec"
+  },
+  {
+    "en": "hairdresser",
+    "pl": "fryzjer"
+  },
+  {
+    "en": "pilot",
+    "pl": "pilot"
+  },
+  {
+    "en": "sailor",
+    "pl": "ĹĽeglarz"
+  },
+  {
+    "en": "soldier",
+    "pl": "ĹĽoĹ‚nierz"
+  },
+  {
+    "en": "translator",
+    "pl": "tĹ‚umacz"
+  },
+  {
+    "en": "psychologist",
+    "pl": "psycholog"
+  },
+  {
+    "en": "therapist",
+    "pl": "terapeuta"
+  },
+  {
+    "en": "vet",
+    "pl": "weterynarz"
+  },
+  {
+    "en": "librarian",
+    "pl": "bibliotekarz"
+  },
+  {
+    "en": "actor",
+    "pl": "aktor"
+  },
+  {
+    "en": "actress",
+    "pl": "aktorka"
+  },
+  {
+    "en": "singer",
+    "pl": "piosenkarz"
+  },
+  {
+    "en": "composer",
+    "pl": "kompozytor"
+  },
+  {
+    "en": "dancer",
+    "pl": "tancerz"
+  },
+  {
+    "en": "sculptor",
+    "pl": "rzeĹşbiarz"
+  },
+  {
+    "en": "painter",
+    "pl": "malarz"
+  },
+  {
+    "en": "poet",
+    "pl": "poeta"
+  },
+  {
+    "en": "accountant",
+    "pl": "ksiÄ™gowy"
+  },
+  {
+    "en": "consultant",
+    "pl": "konsultant"
+  },
+  {
+    "en": "analyst",
+    "pl": "analityk"
+  },
+  {
+    "en": "researcher",
+    "pl": "badacz"
+  },
+  {
+    "en": "entrepreneur",
+    "pl": "przedsiÄ™biorca"
+  },
+  {
+    "en": "founder",
+    "pl": "zaĹ‚oĹĽyciel"
+  },
+  {
+    "en": "trader",
+    "pl": "handlarz"
+  },
+  {
+    "en": "broker",
+    "pl": "makler"
+  },
+  {
+    "en": "miner",
+    "pl": "gĂłrnik"
+  },
+  {
+    "en": "explorer",
+    "pl": "odkrywca"
+  },
+  {
+    "en": "astronaut",
+    "pl": "astronauta"
+  },
+  {
+    "en": "mayor",
+    "pl": "burmistrz"
+  },
+  {
+    "en": "governor",
+    "pl": "gubernator"
+  },
+  {
+    "en": "president",
+    "pl": "prezydent"
+  },
+  {
+    "en": "minister",
+    "pl": "minister"
+  },
+  {
+    "en": "ambassador",
+    "pl": "ambasador"
+  },
+  {
+    "en": "diplomat",
+    "pl": "dyplomata"
+  },
+  {
+    "en": "citizen",
+    "pl": "obywatel"
+  },
+  {
+    "en": "neighbor",
+    "pl": "sÄ…siad"
+  },
+  {
+    "en": "friend",
+    "pl": "przyjaciel"
+  },
+  {
+    "en": "family",
+    "pl": "rodzina"
+  },
+  {
+    "en": "parent",
+    "pl": "rodzic"
+  },
+  {
+    "en": "mother",
+    "pl": "matka"
+  },
+  {
+    "en": "father",
+    "pl": "ojciec"
+  },
+  {
+    "en": "sister",
+    "pl": "siostra"
+  },
+  {
+    "en": "brother",
+    "pl": "brat"
+  },
+  {
+    "en": "child",
+    "pl": "dziecko"
+  },
+  {
+    "en": "baby",
+    "pl": "niemowlÄ™"
+  },
+  {
+    "en": "teenager",
+    "pl": "nastolatek"
+  },
+  {
+    "en": "adult",
+    "pl": "dorosĹ‚y"
+  },
+  {
+    "en": "senior",
+    "pl": "senior"
+  },
+  {
+    "en": "marriage",
+    "pl": "maĹ‚ĹĽeĹ„stwo"
+  },
+  {
+    "en": "wedding",
+    "pl": "Ĺ›lub"
+  },
+  {
+    "en": "birthday",
+    "pl": "urodziny"
+  },
+  {
+    "en": "holiday",
+    "pl": "Ĺ›wiÄ™to"
+  },
+  {
+    "en": "festival",
+    "pl": "festiwal"
+  },
+  {
+    "en": "celebration",
+    "pl": "uroczystoĹ›Ä‡"
+  },
+  {
+    "en": "tradition",
+    "pl": "tradycja"
+  },
+  {
+    "en": "culture",
+    "pl": "kultura"
+  },
+  {
+    "en": "history",
+    "pl": "historia"
+  },
+  {
+    "en": "future",
+    "pl": "przyszĹ‚oĹ›Ä‡"
+  },
+  {
+    "en": "present",
+    "pl": "teraĹşniejszoĹ›Ä‡"
+  },
+  {
+    "en": "past",
+    "pl": "przeszĹ‚oĹ›Ä‡"
+  },
+  {
+    "en": "memory",
+    "pl": "pamiÄ™Ä‡"
+  },
+  {
+    "en": "story",
+    "pl": "opowieĹ›Ä‡"
+  },
+  {
+    "en": "legend",
+    "pl": "legenda"
+  },
+  {
+    "en": "hero",
+    "pl": "bohater"
+  },
+  {
+    "en": "journey",
+    "pl": "podrĂłĹĽ"
+  },
+  {
+    "en": "adventure",
+    "pl": "przygoda"
+  },
+  {
+    "en": "challenge",
+    "pl": "wyzwanie"
+  },
+  {
+    "en": "victory",
+    "pl": "zwyciÄ™stwo"
+  },
+  {
+    "en": "defeat",
+    "pl": "poraĹĽka"
+  },
+  {
+    "en": "freedom",
+    "pl": "wolnoĹ›Ä‡"
+  },
+  {
+    "en": "equality",
+    "pl": "rĂłwnoĹ›Ä‡"
+  },
+  {
+    "en": "respect",
+    "pl": "szacunek"
+  },
+  {
+    "en": "trust",
+    "pl": "zaufanie"
+  },
+  {
+    "en": "loyalty",
+    "pl": "lojalnoĹ›Ä‡"
+  },
+  {
+    "en": "courage",
+    "pl": "odwaga"
+  },
+  {
+    "en": "patience",
+    "pl": "cierpliwoĹ›Ä‡"
+  },
+  {
+    "en": "kindness",
+    "pl": "ĹĽyczliwoĹ›Ä‡"
+  },
+  {
+    "en": "empathy",
+    "pl": "empatia"
+  },
+  {
+    "en": "honesty",
+    "pl": "uczciwoĹ›Ä‡"
+  },
+  {
+    "en": "wisdom",
+    "pl": "mÄ…droĹ›Ä‡"
+  },
+  {
+    "en": "knowledge",
+    "pl": "wiedza"
+  },
+  {
+    "en": "learning",
+    "pl": "nauka"
+  },
+  {
+    "en": "exam",
+    "pl": "egzamin"
+  },
+  {
+    "en": "grade",
+    "pl": "ocena"
+  },
+  {
+    "en": "diploma",
+    "pl": "dyplom"
+  },
+  {
+    "en": "scholarship",
+    "pl": "stypendium"
+  },
+  {
+    "en": "laboratory",
+    "pl": "laboratorium"
+  },
+  {
+    "en": "experiment",
+    "pl": "eksperyment"
+  },
+  {
+    "en": "result",
+    "pl": "wynik"
+  },
+  {
+    "en": "conclusion",
+    "pl": "wniosek"
+  },
+  {
+    "en": "presentation",
+    "pl": "prezentacja"
+  },
+  {
+    "en": "conference",
+    "pl": "konferencja"
+  },
+  {
+    "en": "seminar",
+    "pl": "seminarium"
+  },
+  {
+    "en": "workshop",
+    "pl": "warsztat"
+  },
+  {
+    "en": "community",
+    "pl": "spoĹ‚ecznoĹ›Ä‡"
+  },
+  {
+    "en": "support",
+    "pl": "wsparcie"
+  },
+  {
+    "en": "volunteer",
+    "pl": "wolontariusz"
+  },
+  {
+    "en": "charity",
+    "pl": "organizacja charytatywna"
+  },
+  {
+    "en": "donation",
+    "pl": "darowizna"
+  },
+  {
+    "en": "movement",
+    "pl": "ruch"
+  },
+  {
+    "en": "initiative",
+    "pl": "inicjatywa"
+  },
+  {
+    "en": "vision",
+    "pl": "wizja"
+  },
+  {
+    "en": "mission",
+    "pl": "misja"
+  },
+  {
+    "en": "impact",
+    "pl": "wpĹ‚yw"
+  },
+  {
+    "en": "environment",
+    "pl": "Ĺ›rodowisko"
+  },
+  {
+    "en": "ecosystem",
+    "pl": "ekosystem"
+  },
+  {
+    "en": "pollution",
+    "pl": "zanieczyszczenie"
+  },
+  {
+    "en": "recycling",
+    "pl": "recykling"
+  },
+  {
+    "en": "energy",
+    "pl": "energia"
+  },
+  {
+    "en": "solar",
+    "pl": "sĹ‚oneczny"
+  },
+  {
+    "en": "windmill",
+    "pl": "wiatrak"
+  },
+  {
+    "en": "battery_pack",
+    "pl": "magazyn energii"
+  },
+  {
+    "en": "transport",
+    "pl": "transport"
+  },
+  {
+    "en": "logistics",
+    "pl": "logistyka"
+  },
+  {
+    "en": "warehouse",
+    "pl": "magazyn"
+  },
+  {
+    "en": "delivery",
+    "pl": "dostawa"
+  },
+  {
+    "en": "inventory",
+    "pl": "zapasy"
+  },
+  {
+    "en": "storage",
+    "pl": "skĹ‚adowanie"
+  },
+  {
+    "en": "tracking",
+    "pl": "Ĺ›ledzenie"
+  },
+  {
+    "en": "customer_service",
+    "pl": "obsĹ‚uga klienta"
+  },
+  {
+    "en": "helpdesk",
+    "pl": "pomoc techniczna"
+  },
+  {
+    "en": "feedback",
+    "pl": "opinie"
+  },
+  {
+    "en": "survey",
+    "pl": "ankieta"
+  },
+  {
+    "en": "rating",
+    "pl": "ocena"
+  },
+  {
+    "en": "review",
+    "pl": "recenzja"
+  },
+  {
+    "en": "benchmark",
+    "pl": "benchmark"
+  },
+  {
+    "en": "standard",
+    "pl": "standard"
+  },
+  {
+    "en": "quality",
+    "pl": "jakoĹ›Ä‡"
+  },
+  {
+    "en": "warranty",
+    "pl": "gwarancja"
+  },
+  {
+    "en": "return",
+    "pl": "zwrot"
+  },
+  {
+    "en": "exchange",
+    "pl": "wymiana"
+  },
+  {
+    "en": "repair",
+    "pl": "naprawa"
+  },
+  {
+    "en": "maintenance",
+    "pl": "utrzymanie"
+  },
+  {
+    "en": "inspection",
+    "pl": "inspekcja"
+  },
+  {
+    "en": "procedure",
+    "pl": "procedura"
+  },
+  {
+    "en": "manual",
+    "pl": "podrÄ™cznik"
+  },
+  {
+    "en": "prototype",
+    "pl": "prototyp"
+  },
+  {
+    "en": "version",
+    "pl": "wersja"
+  },
+  {
+    "en": "roadmap",
+    "pl": "plan dziaĹ‚ania"
+  },
+  {
+    "en": "milestone",
+    "pl": "kamieĹ„ milowy"
+  },
+  {
+    "en": "sprint",
+    "pl": "sprint"
+  },
+  {
+    "en": "backlog",
+    "pl": "lista zadaĹ„"
+  },
+  {
+    "en": "issue",
+    "pl": "problem"
+  },
+  {
+    "en": "bug",
+    "pl": "bĹ‚Ä…d"
+  },
+  {
+    "en": "fix",
+    "pl": "poprawka"
+  },
+  {
+    "en": "patch",
+    "pl": "Ĺ‚atka"
+  },
+  {
+    "en": "commit",
+    "pl": "commit"
+  },
+  {
+    "en": "merge",
+    "pl": "scalenie"
+  },
+  {
+    "en": "repository",
+    "pl": "repozytorium"
+  },
+  {
+    "en": "deploy",
+    "pl": "wdroĹĽenie"
+  },
+  {
+    "en": "monitoring",
+    "pl": "monitoring"
+  },
+  {
+    "en": "alert",
+    "pl": "alert"
+  },
+  {
+    "en": "incident",
+    "pl": "incydent"
+  },
+  {
+    "en": "uptime",
+    "pl": "czas dziaĹ‚ania"
+  },
+  {
+    "en": "latency",
+    "pl": "opĂłĹşnienie"
+  },
+  {
+    "en": "optimization",
+    "pl": "optymalizacja"
+  },
+  {
+    "en": "scalability",
+    "pl": "skalowalnoĹ›Ä‡"
+  },
+  {
+    "en": "performance",
+    "pl": "wydajnoĹ›Ä‡"
+  },
+  {
+    "en": "load",
+    "pl": "obciÄ…ĹĽenie"
+  },
+  {
+    "en": "capacity",
+    "pl": "pojemnoĹ›Ä‡"
+  },
+  {
+    "en": "usage",
+    "pl": "uĹĽycie"
+  },
+  {
+    "en": "quota",
+    "pl": "limit"
+  }
 ]
-
-  
