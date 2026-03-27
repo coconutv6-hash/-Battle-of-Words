@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/-Battle-of-Words/">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bow</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="description" content="Bow - 8-second vocabulary duel">
+  <link rel="icon" type="image/png" href="icons/Icon-192.png">
+</head>
+<body>
+  <script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      var scriptTag = document.createElement('script');
+      scriptTag.src = "main.dart.js";
+      scriptTag.type = "application/javascript";
+      document.body.appendChild(scriptTag);
+    });
+  </script>
+</body>
+</html>
