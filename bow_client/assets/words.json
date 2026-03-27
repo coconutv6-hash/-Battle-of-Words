@@ -1,7 +1,7 @@
 [
   {
     "en": "apple",
-    "pl": "jabĹ‚ko"
+    "pl": "jabłko"
   },
   {
     "en": "banana",
@@ -9,7 +9,7 @@
   },
   {
     "en": "orange",
-    "pl": "pomaraĹ„cza"
+    "pl": "pomarańcza"
   },
   {
     "en": "pear",
@@ -21,7 +21,7 @@
   },
   {
     "en": "plum",
-    "pl": "Ĺ›liwka"
+    "pl": "śliwka"
   },
   {
     "en": "strawberry",
@@ -33,7 +33,7 @@
   },
   {
     "en": "blueberry",
-    "pl": "borĂłwka"
+    "pl": "borówka"
   },
   {
     "en": "watermelon",
@@ -45,7 +45,7 @@
   },
   {
     "en": "cherry",
-    "pl": "wiĹ›nia"
+    "pl": "wiśnia"
   },
   {
     "en": "grape",
@@ -97,11 +97,11 @@
   },
   {
     "en": "cranberry",
-    "pl": "ĹĽurawina"
+    "pl": "żurawina"
   },
   {
     "en": "blackberry",
-    "pl": "jeĹĽyna"
+    "pl": "jeżyna"
   },
   {
     "en": "currant",
@@ -121,7 +121,7 @@
   },
   {
     "en": "cucumber",
-    "pl": "ogĂłrek"
+    "pl": "ogórek"
   },
   {
     "en": "carrot",
@@ -145,7 +145,7 @@
   },
   {
     "en": "lettuce",
-    "pl": "saĹ‚ata"
+    "pl": "sałata"
   },
   {
     "en": "spinach",
@@ -153,7 +153,7 @@
   },
   {
     "en": "broccoli",
-    "pl": "brokuĹ‚"
+    "pl": "brokuł"
   },
   {
     "en": "cauliflower",
@@ -193,7 +193,7 @@
   },
   {
     "en": "eggplant",
-    "pl": "bakĹ‚aĹĽan"
+    "pl": "bakłażan"
   },
   {
     "en": "bean",
@@ -217,7 +217,7 @@
   },
   {
     "en": "rice",
-    "pl": "ryĹĽ"
+    "pl": "ryż"
   },
   {
     "en": "wheat",
@@ -229,11 +229,11 @@
   },
   {
     "en": "barley",
-    "pl": "jÄ™czmieĹ„"
+    "pl": "jęczmień"
   },
   {
     "en": "rye",
-    "pl": "ĹĽyto"
+    "pl": "żyto"
   },
   {
     "en": "bread",
@@ -241,7 +241,7 @@
   },
   {
     "en": "butter",
-    "pl": "masĹ‚o"
+    "pl": "masło"
   },
   {
     "en": "cheese",
@@ -257,7 +257,7 @@
   },
   {
     "en": "cream",
-    "pl": "Ĺ›mietana"
+    "pl": "śmietana"
   },
   {
     "en": "egg",
@@ -269,7 +269,7 @@
   },
   {
     "en": "beef",
-    "pl": "woĹ‚owina"
+    "pl": "wołowina"
   },
   {
     "en": "pork",
@@ -277,7 +277,7 @@
   },
   {
     "en": "lamb",
-    "pl": "jagniÄ™cina"
+    "pl": "jagnięcina"
   },
   {
     "en": "ham",
@@ -285,7 +285,7 @@
   },
   {
     "en": "sausage",
-    "pl": "kieĹ‚basa"
+    "pl": "kiełbasa"
   },
   {
     "en": "fish",
@@ -293,15 +293,15 @@
   },
   {
     "en": "salmon",
-    "pl": "Ĺ‚osoĹ›"
+    "pl": "łosoś"
   },
   {
     "en": "trout",
-    "pl": "pstrÄ…g"
+    "pl": "pstrąg"
   },
   {
     "en": "herring",
-    "pl": "Ĺ›ledĹş"
+    "pl": "śledź"
   },
   {
     "en": "shrimp",
@@ -317,7 +317,7 @@
   },
   {
     "en": "mussel",
-    "pl": "maĹ‚ĹĽa"
+    "pl": "małża"
   },
   {
     "en": "oyster",
@@ -325,7 +325,7 @@
   },
   {
     "en": "breadroll",
-    "pl": "buĹ‚ka"
+    "pl": "bułka"
   },
   {
     "en": "cake",
@@ -345,7 +345,7 @@
   },
   {
     "en": "salt",
-    "pl": "sĂłl"
+    "pl": "sól"
   },
   {
     "en": "peppercorn",
@@ -357,7 +357,7 @@
   },
   {
     "en": "herb",
-    "pl": "zioĹ‚o"
+    "pl": "zioło"
   },
   {
     "en": "basil",
@@ -377,7 +377,7 @@
   },
   {
     "en": "mint",
-    "pl": "miÄ™ta"
+    "pl": "mięta"
   },
   {
     "en": "cinnamon",
@@ -389,11 +389,11 @@
   },
   {
     "en": "honey",
-    "pl": "miĂłd"
+    "pl": "miód"
   },
   {
     "en": "jam",
-    "pl": "dĹĽem"
+    "pl": "dżem"
   },
   {
     "en": "soup",
@@ -401,11 +401,11 @@
   },
   {
     "en": "salad",
-    "pl": "saĹ‚atka"
+    "pl": "sałatka"
   },
   {
     "en": "breakfast",
-    "pl": "Ĺ›niadanie"
+    "pl": "śniadanie"
   },
   {
     "en": "lunch",
@@ -417,7 +417,7 @@
   },
   {
     "en": "snack",
-    "pl": "przekÄ…ska"
+    "pl": "przekąska"
   },
   {
     "en": "dessert",
@@ -449,11 +449,11 @@
   },
   {
     "en": "soda",
-    "pl": "napĂłj gazowany"
+    "pl": "napój gazowany"
   },
   {
     "en": "animal",
-    "pl": "zwierzÄ™"
+    "pl": "zwierzę"
   },
   {
     "en": "dog",
@@ -465,7 +465,7 @@
   },
   {
     "en": "horse",
-    "pl": "koĹ„"
+    "pl": "koń"
   },
   {
     "en": "cow",
@@ -473,7 +473,7 @@
   },
   {
     "en": "pig",
-    "pl": "Ĺ›winia"
+    "pl": "świnia"
   },
   {
     "en": "sheep",
@@ -485,7 +485,7 @@
   },
   {
     "en": "rabbit",
-    "pl": "krĂłlik"
+    "pl": "królik"
   },
   {
     "en": "fox",
@@ -497,7 +497,7 @@
   },
   {
     "en": "bear",
-    "pl": "niedĹşwiedĹş"
+    "pl": "niedźwiedź"
   },
   {
     "en": "lion",
@@ -509,15 +509,15 @@
   },
   {
     "en": "monkey",
-    "pl": "maĹ‚pa"
+    "pl": "małpa"
   },
   {
     "en": "elephant",
-    "pl": "sĹ‚oĹ„"
+    "pl": "słoń"
   },
   {
     "en": "giraffe",
-    "pl": "ĹĽyrafa"
+    "pl": "żyrafa"
   },
   {
     "en": "zebra",
@@ -537,11 +537,11 @@
   },
   {
     "en": "camel",
-    "pl": "wielbĹ‚Ä…d"
+    "pl": "wielbłąd"
   },
   {
     "en": "squirrel",
-    "pl": "wiewiĂłrka"
+    "pl": "wiewiórka"
   },
   {
     "en": "mouse",
@@ -553,7 +553,7 @@
   },
   {
     "en": "hedgehog",
-    "pl": "jeĹĽ"
+    "pl": "jeż"
   },
   {
     "en": "badger",
@@ -561,7 +561,7 @@
   },
   {
     "en": "beaver",
-    "pl": "bĂłbr"
+    "pl": "bóbr"
   },
   {
     "en": "otter",
@@ -569,11 +569,11 @@
   },
   {
     "en": "deer",
-    "pl": "jeleĹ„"
+    "pl": "jeleń"
   },
   {
     "en": "elk",
-    "pl": "Ĺ‚oĹ›"
+    "pl": "łoś"
   },
   {
     "en": "boar",
@@ -585,11 +585,11 @@
   },
   {
     "en": "eagle",
-    "pl": "orzeĹ‚"
+    "pl": "orzeł"
   },
   {
     "en": "hawk",
-    "pl": "jastrzÄ…b"
+    "pl": "jastrząb"
   },
   {
     "en": "owl",
@@ -597,11 +597,11 @@
   },
   {
     "en": "sparrow",
-    "pl": "wrĂłbel"
+    "pl": "wróbel"
   },
   {
     "en": "pigeon",
-    "pl": "goĹ‚Ä…b"
+    "pl": "gołąb"
   },
   {
     "en": "duck",
@@ -609,11 +609,11 @@
   },
   {
     "en": "goose",
-    "pl": "gÄ™Ĺ›"
+    "pl": "gęś"
   },
   {
     "en": "swan",
-    "pl": "Ĺ‚abÄ™dĹş"
+    "pl": "łabędź"
   },
   {
     "en": "stork",
@@ -633,7 +633,7 @@
   },
   {
     "en": "chick",
-    "pl": "pisklÄ™"
+    "pl": "pisklę"
   },
   {
     "en": "butterfly",
@@ -641,7 +641,7 @@
   },
   {
     "en": "bee",
-    "pl": "pszczoĹ‚a"
+    "pl": "pszczoła"
   },
   {
     "en": "wasp",
@@ -649,11 +649,11 @@
   },
   {
     "en": "ant",
-    "pl": "mrĂłwka"
+    "pl": "mrówka"
   },
   {
     "en": "beetle",
-    "pl": "chrzÄ…szcz"
+    "pl": "chrząszcz"
   },
   {
     "en": "ladybug",
@@ -669,7 +669,7 @@
   },
   {
     "en": "spider",
-    "pl": "pajÄ…k"
+    "pl": "pająk"
   },
   {
     "en": "worm",
@@ -693,19 +693,19 @@
   },
   {
     "en": "leaf",
-    "pl": "liĹ›Ä‡"
+    "pl": "liść"
   },
   {
     "en": "root",
-    "pl": "korzeĹ„"
+    "pl": "korzeń"
   },
   {
     "en": "branch",
-    "pl": "gaĹ‚Ä…Ĺş"
+    "pl": "gałąź"
   },
   {
     "en": "trunk",
-    "pl": "pieĹ„"
+    "pl": "pień"
   },
   {
     "en": "bark",
@@ -721,19 +721,19 @@
   },
   {
     "en": "stone",
-    "pl": "kamieĹ„"
+    "pl": "kamień"
   },
   {
     "en": "rock",
-    "pl": "skaĹ‚a"
+    "pl": "skała"
   },
   {
     "en": "mountain",
-    "pl": "gĂłra"
+    "pl": "góra"
   },
   {
     "en": "hill",
-    "pl": "wzgĂłrze"
+    "pl": "wzgórze"
   },
   {
     "en": "valley",
@@ -741,7 +741,7 @@
   },
   {
     "en": "plain",
-    "pl": "rĂłwnina"
+    "pl": "równina"
   },
   {
     "en": "river",
@@ -749,7 +749,7 @@
   },
   {
     "en": "stream",
-    "pl": "strumieĹ„"
+    "pl": "strumień"
   },
   {
     "en": "lake",
@@ -777,11 +777,11 @@
   },
   {
     "en": "beach",
-    "pl": "plaĹĽa"
+    "pl": "plaża"
   },
   {
     "en": "coast",
-    "pl": "wybrzeĹĽe"
+    "pl": "wybrzeże"
   },
   {
     "en": "island",
@@ -789,7 +789,7 @@
   },
   {
     "en": "peninsula",
-    "pl": "pĂłĹ‚wysep"
+    "pl": "półwysep"
   },
   {
     "en": "rain",
@@ -797,7 +797,7 @@
   },
   {
     "en": "snow",
-    "pl": "Ĺ›nieg"
+    "pl": "śnieg"
   },
   {
     "en": "hail",
@@ -805,7 +805,7 @@
   },
   {
     "en": "fog",
-    "pl": "mgĹ‚a"
+    "pl": "mgła"
   },
   {
     "en": "cloud",
@@ -817,11 +817,11 @@
   },
   {
     "en": "sun",
-    "pl": "sĹ‚oĹ„ce"
+    "pl": "słońce"
   },
   {
     "en": "moon",
-    "pl": "ksiÄ™ĹĽyc"
+    "pl": "księżyc"
   },
   {
     "en": "star",
@@ -841,11 +841,11 @@
   },
   {
     "en": "lightning",
-    "pl": "bĹ‚yskawica"
+    "pl": "błyskawica"
   },
   {
     "en": "rainbow",
-    "pl": "tÄ™cza"
+    "pl": "tęcza"
   },
   {
     "en": "climate",
@@ -873,7 +873,7 @@
   },
   {
     "en": "autumn",
-    "pl": "jesieĹ„"
+    "pl": "jesień"
   },
   {
     "en": "winter",
@@ -881,19 +881,19 @@
   },
   {
     "en": "north",
-    "pl": "pĂłĹ‚noc"
+    "pl": "północ"
   },
   {
     "en": "south",
-    "pl": "poĹ‚udnie"
+    "pl": "południe"
   },
   {
     "en": "east",
-    "pl": "wschĂłd"
+    "pl": "wschód"
   },
   {
     "en": "west",
-    "pl": "zachĂłd"
+    "pl": "zachód"
   },
   {
     "en": "compass",
@@ -913,7 +913,7 @@
   },
   {
     "en": "village",
-    "pl": "wieĹ›"
+    "pl": "wieś"
   },
   {
     "en": "street",
@@ -937,7 +937,7 @@
   },
   {
     "en": "garden",
-    "pl": "ogrĂłd"
+    "pl": "ogród"
   },
   {
     "en": "playground",
@@ -945,7 +945,7 @@
   },
   {
     "en": "school",
-    "pl": "szkoĹ‚a"
+    "pl": "szkoła"
   },
   {
     "en": "hospital",
@@ -1009,7 +1009,7 @@
   },
   {
     "en": "room",
-    "pl": "pokĂłj"
+    "pl": "pokój"
   },
   {
     "en": "kitchen",
@@ -1017,7 +1017,7 @@
   },
   {
     "en": "bathroom",
-    "pl": "Ĺ‚azienka"
+    "pl": "łazienka"
   },
   {
     "en": "bedroom",
@@ -1041,7 +1041,7 @@
   },
   {
     "en": "wall",
-    "pl": "Ĺ›ciana"
+    "pl": "ściana"
   },
   {
     "en": "door",
@@ -1053,7 +1053,7 @@
   },
   {
     "en": "floor",
-    "pl": "podĹ‚oga"
+    "pl": "podłoga"
   },
   {
     "en": "ceiling",
@@ -1073,7 +1073,7 @@
   },
   {
     "en": "garage",
-    "pl": "garaĹĽ"
+    "pl": "garaż"
   },
   {
     "en": "furniture",
@@ -1081,7 +1081,7 @@
   },
   {
     "en": "chair",
-    "pl": "krzesĹ‚o"
+    "pl": "krzesło"
   },
   {
     "en": "armchair",
@@ -1093,7 +1093,7 @@
   },
   {
     "en": "table",
-    "pl": "stĂłĹ‚"
+    "pl": "stół"
   },
   {
     "en": "desk",
@@ -1101,7 +1101,7 @@
   },
   {
     "en": "bed",
-    "pl": "Ĺ‚ĂłĹĽko"
+    "pl": "łóżko"
   },
   {
     "en": "wardrobe",
@@ -1109,7 +1109,7 @@
   },
   {
     "en": "shelf",
-    "pl": "pĂłĹ‚ka"
+    "pl": "półka"
   },
   {
     "en": "cabinet",
@@ -1125,7 +1125,7 @@
   },
   {
     "en": "curtain",
-    "pl": "zasĹ‚ona"
+    "pl": "zasłona"
   },
   {
     "en": "mirror",
@@ -1185,7 +1185,7 @@
   },
   {
     "en": "headphones",
-    "pl": "sĹ‚uchawki"
+    "pl": "słuchawki"
   },
   {
     "en": "microphone",
@@ -1193,7 +1193,7 @@
   },
   {
     "en": "speaker",
-    "pl": "gĹ‚oĹ›nik"
+    "pl": "głośnik"
   },
   {
     "en": "battery",
@@ -1201,7 +1201,7 @@
   },
   {
     "en": "charger",
-    "pl": "Ĺ‚adowarka"
+    "pl": "ładowarka"
   },
   {
     "en": "cable",
@@ -1225,7 +1225,7 @@
   },
   {
     "en": "password",
-    "pl": "hasĹ‚o"
+    "pl": "hasło"
   },
   {
     "en": "software",
@@ -1233,7 +1233,7 @@
   },
   {
     "en": "hardware",
-    "pl": "sprzÄ™t"
+    "pl": "sprzęt"
   },
   {
     "en": "update",
@@ -1253,7 +1253,7 @@
   },
   {
     "en": "network",
-    "pl": "sieÄ‡"
+    "pl": "sieć"
   },
   {
     "en": "database",
@@ -1273,7 +1273,7 @@
   },
   {
     "en": "message",
-    "pl": "wiadomoĹ›Ä‡"
+    "pl": "wiadomość"
   },
   {
     "en": "notification",
@@ -1281,7 +1281,7 @@
   },
   {
     "en": "user",
-    "pl": "uĹĽytkownik"
+    "pl": "użytkownik"
   },
   {
     "en": "account",
@@ -1293,11 +1293,11 @@
   },
   {
     "en": "privacy",
-    "pl": "prywatnoĹ›Ä‡"
+    "pl": "prywatność"
   },
   {
     "en": "security",
-    "pl": "bezpieczeĹ„stwo"
+    "pl": "bezpieczeństwo"
   },
   {
     "en": "algorithm",
@@ -1317,7 +1317,7 @@
   },
   {
     "en": "car",
-    "pl": "samochĂłd"
+    "pl": "samochód"
   },
   {
     "en": "bus",
@@ -1329,7 +1329,7 @@
   },
   {
     "en": "train",
-    "pl": "pociÄ…g"
+    "pl": "pociąg"
   },
   {
     "en": "subway",
@@ -1349,7 +1349,7 @@
   },
   {
     "en": "truck",
-    "pl": "ciÄ™ĹĽarĂłwka"
+    "pl": "ciężarówka"
   },
   {
     "en": "ship",
@@ -1357,7 +1357,7 @@
   },
   {
     "en": "boat",
-    "pl": "Ĺ‚ĂłdĹş"
+    "pl": "łódź"
   },
   {
     "en": "plane",
@@ -1381,7 +1381,7 @@
   },
   {
     "en": "luggage",
-    "pl": "bagaĹĽ"
+    "pl": "bagaż"
   },
   {
     "en": "suitcase",
@@ -1429,11 +1429,11 @@
   },
   {
     "en": "spruce",
-    "pl": "Ĺ›wierk"
+    "pl": "świerk"
   },
   {
     "en": "fir",
-    "pl": "jodĹ‚a"
+    "pl": "jodła"
   },
   {
     "en": "cedar",
@@ -1465,11 +1465,11 @@
   },
   {
     "en": "walnut",
-    "pl": "orzech wĹ‚oski"
+    "pl": "orzech włoski"
   },
   {
     "en": "acorn",
-    "pl": "ĹĽoĹ‚Ä…dĹş"
+    "pl": "żołądź"
   },
   {
     "en": "mushroom",
@@ -1509,7 +1509,7 @@
   },
   {
     "en": "polar_bear",
-    "pl": "niedĹşwiedĹş polarny"
+    "pl": "niedźwiedź polarny"
   },
   {
     "en": "reef",
@@ -1521,7 +1521,7 @@
   },
   {
     "en": "octopus",
-    "pl": "oĹ›miornica"
+    "pl": "ośmiornica"
   },
   {
     "en": "jellyfish",
@@ -1529,7 +1529,7 @@
   },
   {
     "en": "turtle",
-    "pl": "ĹĽĂłĹ‚w"
+    "pl": "żółw"
   },
   {
     "en": "seahorse",
@@ -1537,7 +1537,7 @@
   },
   {
     "en": "clam",
-    "pl": "maĹ‚ĹĽ"
+    "pl": "małż"
   },
   {
     "en": "kelp",
@@ -1553,7 +1553,7 @@
   },
   {
     "en": "barnacle",
-    "pl": "pÄ…kla"
+    "pl": "pąkla"
   },
   {
     "en": "plankton",
@@ -1561,7 +1561,7 @@
   },
   {
     "en": "harvest",
-    "pl": "ĹĽniwa"
+    "pl": "żniwa"
   },
   {
     "en": "farmer",
@@ -1569,7 +1569,7 @@
   },
   {
     "en": "tractor",
-    "pl": "ciÄ…gnik"
+    "pl": "ciągnik"
   },
   {
     "en": "field",
@@ -1577,7 +1577,7 @@
   },
   {
     "en": "grain",
-    "pl": "zboĹĽe"
+    "pl": "zboże"
   },
   {
     "en": "hay",
@@ -1585,7 +1585,7 @@
   },
   {
     "en": "barn",
-    "pl": "stodoĹ‚a"
+    "pl": "stodoła"
   },
   {
     "en": "stable",
@@ -1601,19 +1601,19 @@
   },
   {
     "en": "fence",
-    "pl": "pĹ‚ot"
+    "pl": "płot"
   },
   {
     "en": "tool",
-    "pl": "narzÄ™dzie"
+    "pl": "narzędzie"
   },
   {
     "en": "hammer",
-    "pl": "mĹ‚otek"
+    "pl": "młotek"
   },
   {
     "en": "screwdriver",
-    "pl": "Ĺ›rubokrÄ™t"
+    "pl": "śrubokręt"
   },
   {
     "en": "wrench",
@@ -1625,7 +1625,7 @@
   },
   {
     "en": "saw",
-    "pl": "piĹ‚a"
+    "pl": "piła"
   },
   {
     "en": "drill",
@@ -1633,23 +1633,23 @@
   },
   {
     "en": "nail",
-    "pl": "gwĂłĹşdĹş"
+    "pl": "gwóźdź"
   },
   {
     "en": "screw",
-    "pl": "Ĺ›ruba"
+    "pl": "śruba"
   },
   {
     "en": "bolt",
-    "pl": "Ĺ›ruba z nakrÄ™tkÄ…"
+    "pl": "śruba z nakrętką"
   },
   {
     "en": "nut",
-    "pl": "nakrÄ™tka"
+    "pl": "nakrętka"
   },
   {
     "en": "glove",
-    "pl": "rÄ™kawica"
+    "pl": "rękawica"
   },
   {
     "en": "goggles",
@@ -1661,7 +1661,7 @@
   },
   {
     "en": "safety",
-    "pl": "bezpieczeĹ„stwo"
+    "pl": "bezpieczeństwo"
   },
   {
     "en": "measure",
@@ -1673,7 +1673,7 @@
   },
   {
     "en": "tape",
-    "pl": "taĹ›ma"
+    "pl": "taśma"
   },
   {
     "en": "paint",
@@ -1681,11 +1681,11 @@
   },
   {
     "en": "brush",
-    "pl": "pÄ™dzel"
+    "pl": "pędzel"
   },
   {
     "en": "roller",
-    "pl": "waĹ‚ek"
+    "pl": "wałek"
   },
   {
     "en": "bucket",
@@ -1701,7 +1701,7 @@
   },
   {
     "en": "brick",
-    "pl": "cegĹ‚a"
+    "pl": "cegła"
   },
   {
     "en": "sand",
@@ -1709,7 +1709,7 @@
   },
   {
     "en": "gravel",
-    "pl": "ĹĽwir"
+    "pl": "żwir"
   },
   {
     "en": "concrete",
@@ -1729,7 +1729,7 @@
   },
   {
     "en": "glass",
-    "pl": "szkĹ‚o"
+    "pl": "szkło"
   },
   {
     "en": "paper",
@@ -1745,11 +1745,11 @@
   },
   {
     "en": "cotton",
-    "pl": "baweĹ‚na"
+    "pl": "bawełna"
   },
   {
     "en": "wool",
-    "pl": "weĹ‚na"
+    "pl": "wełna"
   },
   {
     "en": "silk",
@@ -1757,7 +1757,7 @@
   },
   {
     "en": "leather",
-    "pl": "skĂłra"
+    "pl": "skóra"
   },
   {
     "en": "fabric",
@@ -1765,15 +1765,15 @@
   },
   {
     "en": "thread",
-    "pl": "niÄ‡"
+    "pl": "nić"
   },
   {
     "en": "needle",
-    "pl": "igĹ‚a"
+    "pl": "igła"
   },
   {
     "en": "scissors",
-    "pl": "noĹĽyczki"
+    "pl": "nożyczki"
   },
   {
     "en": "button",
@@ -1789,7 +1789,7 @@
   },
   {
     "en": "pattern",
-    "pl": "wykrĂłj"
+    "pl": "wykrój"
   },
   {
     "en": "notebook",
@@ -1797,11 +1797,11 @@
   },
   {
     "en": "pen",
-    "pl": "dĹ‚ugopis"
+    "pl": "długopis"
   },
   {
     "en": "pencil",
-    "pl": "oĹ‚Ăłwek"
+    "pl": "ołówek"
   },
   {
     "en": "marker",
@@ -1813,7 +1813,7 @@
   },
   {
     "en": "sharpener",
-    "pl": "temperĂłwka"
+    "pl": "temperówka"
   },
   {
     "en": "ruler",
@@ -1845,7 +1845,7 @@
   },
   {
     "en": "parcel",
-    "pl": "przesyĹ‚ka"
+    "pl": "przesyłka"
   },
   {
     "en": "postman",
@@ -1889,7 +1889,7 @@
   },
   {
     "en": "idea",
-    "pl": "pomysĹ‚"
+    "pl": "pomysł"
   },
   {
     "en": "plan",
@@ -1909,11 +1909,11 @@
   },
   {
     "en": "failure",
-    "pl": "poraĹĽka"
+    "pl": "porażka"
   },
   {
     "en": "progress",
-    "pl": "postÄ™p"
+    "pl": "postęp"
   },
   {
     "en": "improvement",
@@ -1933,7 +1933,7 @@
   },
   {
     "en": "team",
-    "pl": "zespĂłĹ‚"
+    "pl": "zespół"
   },
   {
     "en": "leader",
@@ -1941,7 +1941,7 @@
   },
   {
     "en": "manager",
-    "pl": "menedĹĽer"
+    "pl": "menedżer"
   },
   {
     "en": "employee",
@@ -1969,7 +1969,7 @@
   },
   {
     "en": "budget",
-    "pl": "budĹĽet"
+    "pl": "budżet"
   },
   {
     "en": "finance",
@@ -1993,7 +1993,7 @@
   },
   {
     "en": "supply",
-    "pl": "podaĹĽ"
+    "pl": "podaż"
   },
   {
     "en": "demand",
@@ -2005,7 +2005,7 @@
   },
   {
     "en": "value",
-    "pl": "wartoĹ›Ä‡"
+    "pl": "wartość"
   },
   {
     "en": "data",
@@ -2037,15 +2037,15 @@
   },
   {
     "en": "justice",
-    "pl": "sprawiedliwoĹ›Ä‡"
+    "pl": "sprawiedliwość"
   },
   {
     "en": "court",
-    "pl": "sÄ…d"
+    "pl": "sąd"
   },
   {
     "en": "judge",
-    "pl": "sÄ™dzia"
+    "pl": "sędzia"
   },
   {
     "en": "lawyer",
@@ -2057,7 +2057,7 @@
   },
   {
     "en": "firefighter",
-    "pl": "straĹĽak"
+    "pl": "strażak"
   },
   {
     "en": "doctor",
@@ -2065,7 +2065,7 @@
   },
   {
     "en": "nurse",
-    "pl": "pielÄ™gniarka"
+    "pl": "pielęgniarka"
   },
   {
     "en": "scientist",
@@ -2073,7 +2073,7 @@
   },
   {
     "en": "engineer",
-    "pl": "inĹĽynier"
+    "pl": "inżynier"
   },
   {
     "en": "architect",
@@ -2165,15 +2165,15 @@
   },
   {
     "en": "sailor",
-    "pl": "ĹĽeglarz"
+    "pl": "żeglarz"
   },
   {
     "en": "soldier",
-    "pl": "ĹĽoĹ‚nierz"
+    "pl": "żołnierz"
   },
   {
     "en": "translator",
-    "pl": "tĹ‚umacz"
+    "pl": "tłumacz"
   },
   {
     "en": "psychologist",
@@ -2213,7 +2213,7 @@
   },
   {
     "en": "sculptor",
-    "pl": "rzeĹşbiarz"
+    "pl": "rzeźbiarz"
   },
   {
     "en": "painter",
@@ -2225,7 +2225,7 @@
   },
   {
     "en": "accountant",
-    "pl": "ksiÄ™gowy"
+    "pl": "księgowy"
   },
   {
     "en": "consultant",
@@ -2241,11 +2241,11 @@
   },
   {
     "en": "entrepreneur",
-    "pl": "przedsiÄ™biorca"
+    "pl": "przedsiębiorca"
   },
   {
     "en": "founder",
-    "pl": "zaĹ‚oĹĽyciel"
+    "pl": "założyciel"
   },
   {
     "en": "trader",
@@ -2257,7 +2257,7 @@
   },
   {
     "en": "miner",
-    "pl": "gĂłrnik"
+    "pl": "górnik"
   },
   {
     "en": "explorer",
@@ -2297,7 +2297,7 @@
   },
   {
     "en": "neighbor",
-    "pl": "sÄ…siad"
+    "pl": "sąsiad"
   },
   {
     "en": "friend",
@@ -2333,7 +2333,7 @@
   },
   {
     "en": "baby",
-    "pl": "niemowlÄ™"
+    "pl": "niemowlę"
   },
   {
     "en": "teenager",
@@ -2341,7 +2341,7 @@
   },
   {
     "en": "adult",
-    "pl": "dorosĹ‚y"
+    "pl": "dorosły"
   },
   {
     "en": "senior",
@@ -2349,11 +2349,11 @@
   },
   {
     "en": "marriage",
-    "pl": "maĹ‚ĹĽeĹ„stwo"
+    "pl": "małżeństwo"
   },
   {
     "en": "wedding",
-    "pl": "Ĺ›lub"
+    "pl": "ślub"
   },
   {
     "en": "birthday",
@@ -2361,7 +2361,7 @@
   },
   {
     "en": "holiday",
-    "pl": "Ĺ›wiÄ™to"
+    "pl": "święto"
   },
   {
     "en": "festival",
@@ -2369,7 +2369,7 @@
   },
   {
     "en": "celebration",
-    "pl": "uroczystoĹ›Ä‡"
+    "pl": "uroczystość"
   },
   {
     "en": "tradition",
@@ -2385,23 +2385,23 @@
   },
   {
     "en": "future",
-    "pl": "przyszĹ‚oĹ›Ä‡"
+    "pl": "przyszłość"
   },
   {
     "en": "present",
-    "pl": "teraĹşniejszoĹ›Ä‡"
+    "pl": "teraźniejszość"
   },
   {
     "en": "past",
-    "pl": "przeszĹ‚oĹ›Ä‡"
+    "pl": "przeszłość"
   },
   {
     "en": "memory",
-    "pl": "pamiÄ™Ä‡"
+    "pl": "pamięć"
   },
   {
     "en": "story",
-    "pl": "opowieĹ›Ä‡"
+    "pl": "opowieść"
   },
   {
     "en": "legend",
@@ -2413,7 +2413,7 @@
   },
   {
     "en": "journey",
-    "pl": "podrĂłĹĽ"
+    "pl": "podróż"
   },
   {
     "en": "adventure",
@@ -2425,19 +2425,19 @@
   },
   {
     "en": "victory",
-    "pl": "zwyciÄ™stwo"
+    "pl": "zwycięstwo"
   },
   {
     "en": "defeat",
-    "pl": "poraĹĽka"
+    "pl": "porażka"
   },
   {
     "en": "freedom",
-    "pl": "wolnoĹ›Ä‡"
+    "pl": "wolność"
   },
   {
     "en": "equality",
-    "pl": "rĂłwnoĹ›Ä‡"
+    "pl": "równość"
   },
   {
     "en": "respect",
@@ -2449,7 +2449,7 @@
   },
   {
     "en": "loyalty",
-    "pl": "lojalnoĹ›Ä‡"
+    "pl": "lojalność"
   },
   {
     "en": "courage",
@@ -2457,11 +2457,11 @@
   },
   {
     "en": "patience",
-    "pl": "cierpliwoĹ›Ä‡"
+    "pl": "cierpliwość"
   },
   {
     "en": "kindness",
-    "pl": "ĹĽyczliwoĹ›Ä‡"
+    "pl": "życzliwość"
   },
   {
     "en": "empathy",
@@ -2469,11 +2469,11 @@
   },
   {
     "en": "honesty",
-    "pl": "uczciwoĹ›Ä‡"
+    "pl": "uczciwość"
   },
   {
     "en": "wisdom",
-    "pl": "mÄ…droĹ›Ä‡"
+    "pl": "mądrość"
   },
   {
     "en": "knowledge",
@@ -2533,7 +2533,7 @@
   },
   {
     "en": "community",
-    "pl": "spoĹ‚ecznoĹ›Ä‡"
+    "pl": "społeczność"
   },
   {
     "en": "support",
@@ -2569,11 +2569,11 @@
   },
   {
     "en": "impact",
-    "pl": "wpĹ‚yw"
+    "pl": "wpływ"
   },
   {
     "en": "environment",
-    "pl": "Ĺ›rodowisko"
+    "pl": "środowisko"
   },
   {
     "en": "ecosystem",
@@ -2593,7 +2593,7 @@
   },
   {
     "en": "solar",
-    "pl": "sĹ‚oneczny"
+    "pl": "słoneczny"
   },
   {
     "en": "windmill",
@@ -2625,15 +2625,15 @@
   },
   {
     "en": "storage",
-    "pl": "skĹ‚adowanie"
+    "pl": "składowanie"
   },
   {
     "en": "tracking",
-    "pl": "Ĺ›ledzenie"
+    "pl": "śledzenie"
   },
   {
     "en": "customer_service",
-    "pl": "obsĹ‚uga klienta"
+    "pl": "obsługa klienta"
   },
   {
     "en": "helpdesk",
@@ -2665,7 +2665,7 @@
   },
   {
     "en": "quality",
-    "pl": "jakoĹ›Ä‡"
+    "pl": "jakość"
   },
   {
     "en": "warranty",
@@ -2697,7 +2697,7 @@
   },
   {
     "en": "manual",
-    "pl": "podrÄ™cznik"
+    "pl": "podręcznik"
   },
   {
     "en": "prototype",
@@ -2709,11 +2709,11 @@
   },
   {
     "en": "roadmap",
-    "pl": "plan dziaĹ‚ania"
+    "pl": "plan działania"
   },
   {
     "en": "milestone",
-    "pl": "kamieĹ„ milowy"
+    "pl": "kamień milowy"
   },
   {
     "en": "sprint",
@@ -2721,7 +2721,7 @@
   },
   {
     "en": "backlog",
-    "pl": "lista zadaĹ„"
+    "pl": "lista zadań"
   },
   {
     "en": "issue",
@@ -2729,7 +2729,7 @@
   },
   {
     "en": "bug",
-    "pl": "bĹ‚Ä…d"
+    "pl": "błąd"
   },
   {
     "en": "fix",
@@ -2737,7 +2737,7 @@
   },
   {
     "en": "patch",
-    "pl": "Ĺ‚atka"
+    "pl": "łatka"
   },
   {
     "en": "commit",
@@ -2753,7 +2753,7 @@
   },
   {
     "en": "deploy",
-    "pl": "wdroĹĽenie"
+    "pl": "wdrożenie"
   },
   {
     "en": "monitoring",
@@ -2769,11 +2769,11 @@
   },
   {
     "en": "uptime",
-    "pl": "czas dziaĹ‚ania"
+    "pl": "czas działania"
   },
   {
     "en": "latency",
-    "pl": "opĂłĹşnienie"
+    "pl": "opóźnienie"
   },
   {
     "en": "optimization",
@@ -2781,23 +2781,23 @@
   },
   {
     "en": "scalability",
-    "pl": "skalowalnoĹ›Ä‡"
+    "pl": "skalowalność"
   },
   {
     "en": "performance",
-    "pl": "wydajnoĹ›Ä‡"
+    "pl": "wydajność"
   },
   {
     "en": "load",
-    "pl": "obciÄ…ĹĽenie"
+    "pl": "obciążenie"
   },
   {
     "en": "capacity",
-    "pl": "pojemnoĹ›Ä‡"
+    "pl": "pojemność"
   },
   {
     "en": "usage",
-    "pl": "uĹĽycie"
+    "pl": "użycie"
   },
   {
     "en": "quota",
