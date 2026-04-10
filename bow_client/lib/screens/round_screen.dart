@@ -46,8 +46,27 @@ class _RoundScreenState extends State<RoundScreen> {
         final isResponderTurn = responder?.role == PlayerRole.responder;
 
         final theme = Theme.of(context);
-        const onSurface = Colors.white;
         final gradient = BowBrand.roundGradient(responderPhase: isResponderTurn);
+
+        final playerLabelStyle = GoogleFonts.fredoka(
+          fontSize: 19,
+          fontWeight: FontWeight.w700,
+          height: 1.35,
+          letterSpacing: 0.3,
+          color: Colors.white,
+          shadows: const [
+            Shadow(
+              color: Color(0xB3000000),
+              offset: Offset(0, 2),
+              blurRadius: 6,
+            ),
+            Shadow(
+              color: Color(0x660D1B4A),
+              offset: Offset(0, 1),
+              blurRadius: 3,
+            ),
+          ],
+        );
 
         return Scaffold(
           backgroundColor: Colors.transparent,
@@ -58,9 +77,22 @@ class _RoundScreenState extends State<RoundScreen> {
             title: Text(
               'Runda',
               style: GoogleFonts.fredoka(
-                fontWeight: FontWeight.w600,
-                color: Colors.white,
-                shadows: BowBrand.titleShadow(),
+                fontSize: 26,
+                fontWeight: FontWeight.w800,
+                letterSpacing: 0.5,
+                color: const Color(0xFFFFE082),
+                shadows: const [
+                  Shadow(
+                    color: Color(0xFF1A237E),
+                    offset: Offset(0, 2),
+                    blurRadius: 0,
+                  ),
+                  Shadow(
+                    color: Color(0x99000000),
+                    offset: Offset(0, 4),
+                    blurRadius: 10,
+                  ),
+                ],
               ),
             ),
             actions: [
@@ -92,17 +124,11 @@ class _RoundScreenState extends State<RoundScreen> {
                       children: [
                         Text(
                           'Mówiący: ${speaker?.displayName ?? '—'}',
-                          style: GoogleFonts.montserrat(
-                            fontWeight: FontWeight.w700,
-                            color: onSurface,
-                          ),
+                          style: playerLabelStyle,
                         ),
                         Text(
                           'Odpowiadający: ${responder?.displayName ?? '—'}',
-                          style: GoogleFonts.montserrat(
-                            fontWeight: FontWeight.w700,
-                            color: onSurface,
-                          ),
+                          style: playerLabelStyle,
                         ),
                         const SizedBox(height: 12),
                         Row(
@@ -113,9 +139,17 @@ class _RoundScreenState extends State<RoundScreen> {
                               children: [
                                 Text(
                                   'Życia',
-                                  style: GoogleFonts.montserrat(
+                                  style: GoogleFonts.fredoka(
+                                    fontSize: 15,
                                     fontWeight: FontWeight.w600,
-                                    color: onSurface,
+                                    color: Colors.white.withValues(alpha: 0.92),
+                                    shadows: const [
+                                      Shadow(
+                                        color: Color(0x80000000),
+                                        offset: Offset(0, 1),
+                                        blurRadius: 4,
+                                      ),
+                                    ],
                                   ),
                                 ),
                                 LifeHearts(lives: speaker?.lives ?? 0),
@@ -126,9 +160,17 @@ class _RoundScreenState extends State<RoundScreen> {
                               children: [
                                 Text(
                                   'Życia',
-                                  style: GoogleFonts.montserrat(
+                                  style: GoogleFonts.fredoka(
+                                    fontSize: 15,
                                     fontWeight: FontWeight.w600,
-                                    color: onSurface,
+                                    color: Colors.white.withValues(alpha: 0.92),
+                                    shadows: const [
+                                      Shadow(
+                                        color: Color(0x80000000),
+                                        offset: Offset(0, 1),
+                                        blurRadius: 4,
+                                      ),
+                                    ],
                                   ),
                                 ),
                                 LifeHearts(lives: responder?.lives ?? 0),

@@ -90,7 +90,13 @@ class _RoundTimerBarState extends State<RoundTimerBar> with SingleTickerProvider
                             spreadRadius: 1.5 + pulseT,
                           ),
                         ]
-                      : null,
+                      : [
+                          BoxShadow(
+                            color: const Color(0xFF00E676).withOpacity(0.35),
+                            blurRadius: 8,
+                            spreadRadius: 0.5,
+                          ),
+                        ],
                 ),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(999),
@@ -129,9 +135,11 @@ class _RoundTimerBarState extends State<RoundTimerBar> with SingleTickerProvider
                                         )
                                       : const LinearGradient(
                                           colors: [
-                                            Color(0xFFE0F2FE),
-                                            Color(0xFFFFFFFF),
+                                            Color(0xFFB9F6CA),
+                                            Color(0xFF00E676),
+                                            Color(0xFF00C853),
                                           ],
+                                          stops: [0.0, 0.45, 1.0],
                                         ),
                                   boxShadow: low
                                       ? [
@@ -143,8 +151,9 @@ class _RoundTimerBarState extends State<RoundTimerBar> with SingleTickerProvider
                                         ]
                                       : [
                                           BoxShadow(
-                                            color: Colors.white.withOpacity(0.35),
-                                            blurRadius: 4,
+                                            color: const Color(0xFF69F0AE)
+                                                .withOpacity(0.45),
+                                            blurRadius: 5,
                                           ),
                                         ],
                                 ),

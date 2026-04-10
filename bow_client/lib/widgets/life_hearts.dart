@@ -12,7 +12,17 @@ class LifeHearts extends StatelessWidget {
         final filled = index < lives;
         return Icon(
           filled ? Icons.favorite : Icons.favorite_border,
-          color: filled ? Colors.redAccent : Colors.grey,
+          size: 28,
+          shadows: filled
+              ? const [
+                  Shadow(
+                    color: Color(0x66000000),
+                    offset: Offset(0, 1),
+                    blurRadius: 3,
+                  ),
+                ]
+              : null,
+          color: filled ? Colors.redAccent : Colors.white.withOpacity(0.4),
         );
       }),
     );
