@@ -4,7 +4,9 @@ import 'package:provider/provider.dart';
 
 import '../state/game_controller.dart';
 import '../state/player_role.dart';
+import '../theme/bow_brand.dart';
 import '../widgets/life_hearts.dart';
+import '../widgets/round_timer_bar.dart';
 import 'summary_screen.dart';
 
 class RoundScreen extends StatefulWidget {
@@ -44,14 +46,23 @@ class _RoundScreenState extends State<RoundScreen> {
         final isResponderTurn = responder?.role == PlayerRole.responder;
 
         final theme = Theme.of(context);
-        final onSurface = theme.colorScheme.onSurface;
-        final gradient = isResponderTurn
-            ? const LinearGradient(colors: [Color(0xFFFFD26F), Color(0xFFFFAF7B)])
-            : const LinearGradient(colors: [Color(0xFF4AC29A), Color(0xFFBDFFF3)]);
+        const onSurface = Colors.white;
+        final gradient = BowBrand.roundGradient(responderPhase: isResponderTurn);
 
         return Scaffold(
+          backgroundColor: Colors.transparent,
           appBar: AppBar(
-            title: const Text('Runda'),
+            backgroundColor: Colors.transparent,
+            foregroundColor: Colors.white,
+            elevation: 0,
+            title: Text(
+              'Runda',
+              style: GoogleFonts.fredoka(
+                fontWeight: FontWeight.w600,
+                color: Colors.white,
+                shadows: BowBrand.titleShadow(),
+              ),
+            ),
             actions: [
               IconButton(
                 icon: const Icon(Icons.stop_circle_outlined),
@@ -66,15 +77,16 @@ class _RoundScreenState extends State<RoundScreen> {
             decoration: BoxDecoration(gradient: gradient),
             child: Column(
               children: [
-                LinearProgressIndicator(
-                  minHeight: 8,
-                  value: controller.timeProgress,
-                  backgroundColor: Colors.black12,
-                  color: Colors.white,
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 10),
+                  child: RoundTimerBar(
+                    progress: controller.timeProgress,
+                    height: 12,
+                  ),
                 ),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.all(24),
+                    padding: const EdgeInsets.fromLTRB(24, 8, 24, 24),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
