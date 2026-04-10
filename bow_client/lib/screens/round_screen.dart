@@ -61,26 +61,6 @@ class _RoundScreenState extends State<RoundScreen> {
         final theme = Theme.of(context);
         final gradient = BowBrand.roundGradient(responderPhase: isResponderTurn);
 
-        final playerLabelStyle = GoogleFonts.fredoka(
-          fontSize: 19,
-          fontWeight: FontWeight.w700,
-          height: 1.35,
-          letterSpacing: 0.3,
-          color: Colors.white,
-          shadows: const [
-            Shadow(
-              color: Color(0xB3000000),
-              offset: Offset(0, 2),
-              blurRadius: 6,
-            ),
-            Shadow(
-              color: Color(0x660D1B4A),
-              offset: Offset(0, 1),
-              blurRadius: 3,
-            ),
-          ],
-        );
-
         return Stack(
           children: [
             Scaffold(
@@ -143,59 +123,26 @@ class _RoundScreenState extends State<RoundScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          'Mówiący: ${speaker?.displayName ?? '—'}',
-                          style: playerLabelStyle,
-                        ),
-                        Text(
-                          'Odpowiadający: ${responder?.displayName ?? '—'}',
-                          style: playerLabelStyle,
-                        ),
-                        const SizedBox(height: 12),
                         Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Życia',
-                                  style: GoogleFonts.fredoka(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.white.withValues(alpha: 0.92),
-                                    shadows: const [
-                                      Shadow(
-                                        color: Color(0x80000000),
-                                        offset: Offset(0, 1),
-                                        blurRadius: 4,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                LifeHearts(lives: speaker?.lives ?? 0),
-                              ],
+                            Expanded(
+                              child: _playerLivesBlock(
+                                roleLabel: 'Mówiący',
+                                name: speaker?.displayName ?? '—',
+                                lives: speaker?.lives ?? 0,
+                                alignEnd: false,
+                              ),
                             ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
-                                Text(
-                                  'Życia',
-                                  style: GoogleFonts.fredoka(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.white.withValues(alpha: 0.92),
-                                    shadows: const [
-                                      Shadow(
-                                        color: Color(0x80000000),
-                                        offset: Offset(0, 1),
-                                        blurRadius: 4,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                LifeHearts(lives: responder?.lives ?? 0),
-                              ],
+                            const SizedBox(width: 16),
+                            Expanded(
+                              child: _playerLivesBlock(
+                                roleLabel: 'Odpowiadający',
+                                name: responder?.displayName ?? '—',
+                                lives: responder?.lives ?? 0,
+                                alignEnd: true,
+                              ),
                             ),
                           ],
                         ),
@@ -286,6 +233,107 @@ class _RoundScreenState extends State<RoundScreen> {
           ],
         );
       },
+    );
+  }
+
+  /// Nick przy ikonach życia — biała ramka, tekst w kolorze jak obramowanie „Wyślij” (#1E3A8A).
+  Widget _playerLivesBlock({
+    required String roleLabel,
+    required String name,
+    required int lives,
+    required bool alignEnd,
+  }) {
+    final nickStyle = GoogleFonts.montserrat(
+      fontSize: 15,
+      fontWeight: FontWeight.w500,
+      height: 1.25,
+      color: _titleNavy,
+    );
+
+    final nickBox = Container(
+      constraints: const BoxConstraints(minWidth: 72, maxWidth: 200),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 9),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: _titleNavy, width: 1.5),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.12),
+            offset: const Offset(0, 2),
+            blurRadius: 6,
+          ),
+        ],
+      ),
+      child: Text(
+        name,
+        maxLines: 1,
+        overflow: TextOverflow.ellipsis,
+        textAlign: alignEnd ? TextAlign.end : TextAlign.start,
+        style: nickStyle,
+      ),
+    );
+
+    final hearts = LifeHearts(lives: lives);
+
+    final row = alignEnd
+        ? Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Flexible(child: nickBox),
+              const SizedBox(width: 10),
+              hearts,
+            ],
+          )
+        : Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              hearts,
+              const SizedBox(width: 10),
+              Flexible(child: nickBox),
+            ],
+          );
+
+    return Column(
+      crossAxisAlignment:
+          alignEnd ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+      children: [
+        Text(
+          roleLabel,
+          style: GoogleFonts.montserrat(
+            fontSize: 13,
+            fontWeight: FontWeight.w500,
+            color: Colors.white.withValues(alpha: 0.9),
+            shadows: const [
+              Shadow(
+                color: Color(0x80000000),
+                offset: Offset(0, 1),
+                blurRadius: 3,
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 6),
+        Text(
+          'Życia',
+          style: GoogleFonts.montserrat(
+            fontSize: 13,
+            fontWeight: FontWeight.w600,
+            color: Colors.white.withValues(alpha: 0.92),
+            shadows: const [
+              Shadow(
+                color: Color(0x80000000),
+                offset: Offset(0, 1),
+                blurRadius: 4,
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 6),
+        row,
+      ],
     );
   }
 
