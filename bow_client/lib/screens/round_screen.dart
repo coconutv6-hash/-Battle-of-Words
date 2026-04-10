@@ -19,6 +19,9 @@ class RoundScreen extends StatefulWidget {
 class _RoundScreenState extends State<RoundScreen> {
   final _answerController = TextEditingController();
   String? _error;
+  bool _gameOverNavScheduled = false;
+
+  static const Color _titleNavy = Color(0xFF1E3A8A);
 
   @override
   void dispose() {
@@ -26,18 +29,28 @@ class _RoundScreenState extends State<RoundScreen> {
     super.dispose();
   }
 
+  void _scheduleGameOverNav(GameController controller) {
+    if (!controller.hasWinner || _gameOverNavScheduled) return;
+    _gameOverNavScheduled = true;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      Future.delayed(const Duration(seconds: 3), () {
+        if (!mounted) return;
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(
+            builder: (_) => const SummaryScreen(),
+          ),
+        );
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Consumer<GameController>(
       builder: (context, controller, _) {
         if (controller.hasWinner) {
-          WidgetsBinding.instance.addPostFrameCallback((_) {
-            Navigator.of(context).pushReplacement(
-              MaterialPageRoute(
-                builder: (_) => const SummaryScreen(),
-              ),
-            );
-          });
+          _scheduleGameOverNav(controller);
         }
 
         final speaker = controller.speaker;
@@ -68,46 +81,54 @@ class _RoundScreenState extends State<RoundScreen> {
           ],
         );
 
-        return Scaffold(
-          backgroundColor: Colors.transparent,
-          appBar: AppBar(
-            backgroundColor: Colors.transparent,
-            foregroundColor: Colors.white,
-            elevation: 0,
-            title: Text(
-              'Runda',
-              style: GoogleFonts.fredoka(
-                fontSize: 26,
-                fontWeight: FontWeight.w800,
-                letterSpacing: 0.5,
-                color: const Color(0xFFFFE082),
-                shadows: const [
-                  Shadow(
-                    color: Color(0xFF1A237E),
-                    offset: Offset(0, 2),
-                    blurRadius: 0,
+        return Stack(
+          children: [
+            Scaffold(
+              backgroundColor: Colors.transparent,
+              appBar: AppBar(
+                backgroundColor: Colors.transparent,
+                foregroundColor: Colors.white,
+                elevation: 0,
+                title: Text(
+                  'Runda',
+                  style: GoogleFonts.fredoka(
+                    fontSize: 26,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: 0.5,
+                    color: _titleNavy,
+                    shadows: const [
+                      Shadow(
+                        color: Color(0xE6FFFFFF),
+                        offset: Offset(0, -1),
+                        blurRadius: 0,
+                      ),
+                      Shadow(
+                        color: Color(0xE6FFFFFF),
+                        offset: Offset(0, 1),
+                        blurRadius: 0,
+                      ),
+                      Shadow(
+                        color: Color(0xB3000000),
+                        offset: Offset(0, 3),
+                        blurRadius: 8,
+                      ),
+                    ],
                   ),
-                  Shadow(
-                    color: Color(0x99000000),
-                    offset: Offset(0, 4),
-                    blurRadius: 10,
-                  ),
+                ),
+                actions: [
+                  if (!controller.hasWinner)
+                    IconButton(
+                      icon: const Icon(Icons.stop_circle_outlined),
+                      onPressed: () {
+                        controller.reset();
+                        Navigator.of(context).popUntil((route) => route.isFirst);
+                      },
+                    )
                 ],
               ),
-            ),
-            actions: [
-              IconButton(
-                icon: const Icon(Icons.stop_circle_outlined),
-                onPressed: () {
-                  controller.reset();
-                  Navigator.of(context).popUntil((route) => route.isFirst);
-                },
-              )
-            ],
-          ),
-          body: Container(
-            decoration: BoxDecoration(gradient: gradient),
-            child: Column(
+              body: Container(
+                decoration: BoxDecoration(gradient: gradient),
+                child: Column(
               children: [
                 Padding(
                   padding: const EdgeInsets.fromLTRB(16, 0, 16, 10),
@@ -191,6 +212,78 @@ class _RoundScreenState extends State<RoundScreen> {
               ],
             ),
           ),
+            ),
+            if (controller.hasWinner)
+              Positioned.fill(
+                child: ColoredBox(
+                  color: Colors.black.withValues(alpha: 0.55),
+                  child: Center(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 24),
+                      child: Material(
+                        color: Colors.white,
+                        elevation: 12,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(24),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 28),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Text(
+                                'Koniec gry',
+                                style: GoogleFonts.fredoka(
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.w800,
+                                  color: _titleNavy,
+                                ),
+                              ),
+                              const SizedBox(height: 12),
+                              Text(
+                                'Poprawna odpowiedź:',
+                                style: GoogleFonts.montserrat(
+                                  fontSize: 15,
+                                  color: Colors.grey.shade700,
+                                ),
+                              ),
+                              const SizedBox(height: 8),
+                              Text(
+                                round?.wordPair.en ?? '—',
+                                textAlign: TextAlign.center,
+                                style: GoogleFonts.fredoka(
+                                  fontSize: 32,
+                                  fontWeight: FontWeight.w800,
+                                  color: _titleNavy,
+                                ),
+                              ),
+                              const SizedBox(height: 8),
+                              Text(
+                                round?.wordPair.pl ?? '',
+                                textAlign: TextAlign.center,
+                                style: GoogleFonts.montserrat(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.grey.shade800,
+                                ),
+                              ),
+                              const SizedBox(height: 16),
+                              Text(
+                                'Za chwilę podsumowanie…',
+                                style: GoogleFonts.montserrat(
+                                  fontSize: 13,
+                                  color: Colors.grey.shade600,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+          ],
         );
       },
     );

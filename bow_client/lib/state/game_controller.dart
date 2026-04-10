@@ -5,6 +5,7 @@ import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
+import '../models/match_mistake.dart';
 import '../models/player.dart';
 import '../models/round_state.dart';
 import '../models/word_pair.dart';
@@ -21,6 +22,9 @@ class GameController extends ChangeNotifier {
   RoundState? currentRound;
   PlayerState? winner;
   bool get hasWinner => winner != null;
+
+  /// All mistakes in the current match (cleared on [startMatch] / [reset]).
+  final List<MatchMistake> matchMistakes = [];
 
   Timer? _ticker;
   Timer? _nextRoundDelay;
@@ -57,6 +61,7 @@ class GameController extends ChangeNotifier {
     );
     winner = null;
     currentRound = null;
+    matchMistakes.clear();
     notifyListeners();
   }
 
@@ -67,6 +72,7 @@ class GameController extends ChangeNotifier {
     host!..lives = 2..points = 0..role = PlayerRole.speaker;
     guest!..lives = 2..points = 0..role = PlayerRole.responder;
     winner = null;
+    matchMistakes.clear();
     _startRound();
   }
 
@@ -131,6 +137,15 @@ class GameController extends ChangeNotifier {
     final activeResponder = responder;
     final round = currentRound;
     if (activeResponder == null || round == null) return;
+    matchMistakes.add(
+      MatchMistake(
+        playerId: activeResponder.id,
+        playerDisplayName: activeResponder.displayName,
+        wordPair: round.wordPair,
+        timeout: isTimeout,
+        wrongAnswer: isTimeout ? null : round.responderInput.trim(),
+      ),
+    );
     activeResponder.lives -= 1;
     round
       ..wasCorrect = false
@@ -160,6 +175,7 @@ class GameController extends ChangeNotifier {
     guest = null;
     currentRound = null;
     winner = null;
+    matchMistakes.clear();
     notifyListeners();
   }
 

@@ -25,16 +25,15 @@ class _LobbyScreenState extends State<LobbyScreen> {
     super.dispose();
   }
 
-  InputDecoration _fieldDecoration(String label) {
+  InputDecoration _fieldDecoration(String hint) {
     return InputDecoration(
-      labelText: label,
-      labelStyle: GoogleFonts.montserrat(color: const Color(0xFF1E3A5F)),
-      floatingLabelStyle: GoogleFonts.montserrat(
-        fontWeight: FontWeight.w600,
-        color: const Color(0xFF1E3A5F),
+      hintText: hint,
+      hintStyle: GoogleFonts.montserrat(
+        color: const Color(0xFF94A3B8),
+        fontWeight: FontWeight.w500,
       ),
       filled: true,
-      fillColor: Colors.white.withOpacity(0.94),
+      fillColor: Colors.white.withValues(alpha: 0.94),
       contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(20),
@@ -42,12 +41,58 @@ class _LobbyScreenState extends State<LobbyScreen> {
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(20),
-        borderSide: BorderSide(color: Colors.white.withOpacity(0.35)),
+        borderSide: BorderSide(color: Colors.white.withValues(alpha: 0.35)),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(20),
         borderSide: const BorderSide(color: Color(0xFF3B82F6), width: 2),
       ),
+    );
+  }
+
+  Widget _nameFieldRow({
+    required String title,
+    required String subtitle,
+    required TextEditingController controller,
+  }) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Text(
+          title,
+          style: GoogleFonts.fredoka(
+            fontSize: 17,
+            fontWeight: FontWeight.w700,
+            color: Colors.white,
+            shadows: const [
+              Shadow(
+                color: Color(0x80000000),
+                offset: Offset(0, 1),
+                blurRadius: 4,
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          subtitle,
+          style: GoogleFonts.montserrat(
+            fontSize: 13,
+            height: 1.3,
+            color: Colors.white.withValues(alpha: 0.88),
+          ),
+        ),
+        const SizedBox(height: 10),
+        TextFormField(
+          controller: controller,
+          style: GoogleFonts.montserrat(
+            fontWeight: FontWeight.w600,
+            color: const Color(0xFF1F2937),
+          ),
+          decoration: _fieldDecoration('Wpisz pseudonim'),
+          validator: _required,
+        ),
+      ],
     );
   }
 
@@ -142,24 +187,16 @@ class _LobbyScreenState extends State<LobbyScreen> {
                         ),
                       ),
                       const SizedBox(height: 32),
-                      TextFormField(
+                      _nameFieldRow(
+                        title: 'Gracz A (host)',
+                        subtitle: 'Zaczyna jako mówiący — pierwsza tura.',
                         controller: _hostController,
-                        style: GoogleFonts.montserrat(
-                          fontWeight: FontWeight.w600,
-                          color: const Color(0xFF1F2937),
-                        ),
-                        decoration: _fieldDecoration('Host / Gracz A'),
-                        validator: _required,
                       ),
-                      const SizedBox(height: 16),
-                      TextFormField(
+                      const SizedBox(height: 22),
+                      _nameFieldRow(
+                        title: 'Gracz B (gość)',
+                        subtitle: 'Zaczyna jako odpowiadający.',
                         controller: _guestController,
-                        style: GoogleFonts.montserrat(
-                          fontWeight: FontWeight.w600,
-                          color: const Color(0xFF1F2937),
-                        ),
-                        decoration: _fieldDecoration('Gość / Gracz B'),
-                        validator: _required,
                       ),
                       const SizedBox(height: 36),
                       SizedBox(
