@@ -17,6 +17,9 @@ class GameController extends ChangeNotifier {
   final List<WordPair> _wordDeck = [];
   final _random = Random();
   final Duration roundDuration = const Duration(seconds: 8);
+  bool _isWordBankLoading = false;
+  bool _wordBankReady = false;
+  Future<void>? _wordBankLoadTask;
 
   PlayerState? host;
   PlayerState? guest;
@@ -39,8 +42,22 @@ class GameController extends ChangeNotifier {
   int _lastAppliedVersion = -1;
   String? _lastProcessedAnswerRequestId;
 
+  bool get isWordBankLoading => _isWordBankLoading;
+  bool get isWordBankReady => _wordBankReady;
+  bool get canStartMatchFlow => ready && _wordBankReady && !_isWordBankLoading;
+
   Future<void> loadWordBank() async {
-    if (_wordBank.isNotEmpty) return;
+    if (_wordBankReady) return;
+    if (_wordBankLoadTask != null) {
+      return _wordBankLoadTask!;
+    }
+    _wordBankLoadTask = _loadWordBankInternal();
+    return _wordBankLoadTask!;
+  }
+
+  Future<void> _loadWordBankInternal() async {
+    _isWordBankLoading = true;
+    notifyListeners();
     try {
       final byteData = await rootBundle.load('assets/words.json');
       final raw = utf8.decode(byteData.buffer.asUint8List());
@@ -48,14 +65,27 @@ class GameController extends ChangeNotifier {
       _wordBank
         ..clear()
         ..addAll(decoded.map((e) => WordPair.fromJson(e as Map<String, dynamic>)));
+      _wordBankReady = _wordBank.isNotEmpty;
       if (kDebugMode) {
         debugPrint('Loaded ${_wordBank.length} word pairs');
       }
     } catch (e) {
+      _wordBankReady = false;
       if (kDebugMode) {
         debugPrint('Failed to load words: $e');
       }
+    } finally {
+      _isWordBankLoading = false;
+      _wordBankLoadTask = null;
+      notifyListeners();
     }
+  }
+
+  Future<bool> ensureReadyForMatch() async {
+    if (!_wordBankReady) {
+      await loadWordBank();
+    }
+    return _wordBankReady && ready;
   }
 
   void setupPlayers({required String hostName, required String guestName}) {
@@ -141,7 +171,7 @@ class GameController extends ChangeNotifier {
   }
 
   void startMatch() {
-    if (!ready || _wordBank.isEmpty) return;
+    if (!ready || !_wordBankReady || _wordBank.isEmpty) return;
     _botMoveTimer?.cancel();
     host!..lives = 2..points = 0..role = PlayerRole.speaker;
     guest!..lives = 2..points = 0..role = PlayerRole.responder;

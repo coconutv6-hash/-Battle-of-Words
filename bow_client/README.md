@@ -3,7 +3,6 @@
 Minimal, hot-seat playable version of Bow to validate the 8-second / 2-life gameplay loop before networking + visual polish.
 
 ## Features
-- Local hot-seat mode (host vs guest) with quick name entry.
 - Solo mode against bot (alternating rounds, bot answers automatically).
 - Online room MVP (host creates room code, guest joins by code) via Supabase.
 - Automatic role assignment (speaker vs responder) and 8-second timer.
@@ -17,7 +16,9 @@ Minimal, hot-seat playable version of Bow to validate the 8-second / 2-life game
    flutter pub get
    flutter run
    ```
-3. Enter two nicknames, tap “Stwórz lokalny pojedynek”, start the round, i przekazujcie sobie urządzenie.
+3. Choose one of two modes:
+   - Solo vs Bot
+   - Online room (host creates code, guest joins)
 
 ## Online setup (Supabase MVP)
 

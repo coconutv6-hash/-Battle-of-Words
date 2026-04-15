@@ -67,6 +67,26 @@ class _RoundScreenState extends State<RoundScreen> {
         final speaker = controller.speaker;
         final responder = controller.responder;
         final round = controller.currentRound;
+        if (round == null && !controller.hasWinner) {
+          return Scaffold(
+            backgroundColor: Colors.transparent,
+            body: Container(
+              decoration: BoxDecoration(
+                gradient: BowBrand.roundGradient(responderPhase: false),
+              ),
+              child: Center(
+                child: Text(
+                  'Przygotowuję rundę...',
+                  style: GoogleFonts.fredoka(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
+          );
+        }
         final isLocalResponderTurn = mp.room == null
             ? controller.isHumanResponderTurn
             : ((responder?.id ?? '') == mp.localPlayerId);

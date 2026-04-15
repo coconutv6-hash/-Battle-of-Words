@@ -16,7 +16,7 @@ class WaitingRoomScreen extends StatelessWidget {
     final mp = context.watch<MultiplayerController>();
     final room = mp.room;
     final isOnlineRoom = room != null;
-    final isSolo = !isOnlineRoom && controller.isSoloVsBot;
+    final isSolo = !isOnlineRoom;
     final hostName = isOnlineRoom ? room.hostName : controller.host?.displayName;
     final guestName = isOnlineRoom ? room.guestName : controller.guest?.displayName;
 
@@ -64,14 +64,23 @@ class WaitingRoomScreen extends StatelessWidget {
                 Text(
                   isOnlineRoom
                       ? 'Kod pokoju: ${room.roomCode}. Host startuje mecz gdy guest dołączy.'
-                      : (isSolo
-                          ? 'Tryb solo: grasz przeciwko botowi. Startuj i walcz o zwycięstwo.'
-                          : 'Obie osoby są gotowe? Startujecie rundę.'),
+                      : 'Tryb solo: grasz przeciwko botowi. Startuj i walcz o zwycięstwo.',
                   style: GoogleFonts.montserrat(
                     fontSize: 14,
                     color: Colors.white.withOpacity(0.88),
                   ),
                 ),
+                if (!isOnlineRoom && controller.isWordBankLoading) ...[
+                  const SizedBox(height: 10),
+                  Text(
+                    'Ładowanie słownika...',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white.withOpacity(0.92),
+                    ),
+                  ),
+                ],
                 if (isOnlineRoom) ...[
                   const SizedBox(height: 10),
                   Text(
@@ -93,7 +102,7 @@ class WaitingRoomScreen extends StatelessWidget {
                   name: guestName ?? 'Oczekiwanie na gracza...',
                   subtitle: isOnlineRoom
                       ? 'Gość · dołącza po kodzie pokoju'
-                      : (isSolo ? 'Bot · zaczyna jako responder' : 'Gość · zaczyna jako responder'),
+                      : 'Bot · zaczyna jako responder',
                 ),
                 const Spacer(),
                 SizedBox(
@@ -110,8 +119,11 @@ class WaitingRoomScreen extends StatelessWidget {
                     onPressed: isOnlineRoom
                         ? (mp.canStartMatch ? () => mp.startMatch() : null)
                         : (controller.ready
-                            ? () {
+                            ? () async {
+                                final ok = await controller.ensureReadyForMatch();
+                                if (!context.mounted || !ok) return;
                                 controller.startMatch();
+                                if (controller.currentRound == null) return;
                                 Navigator.of(context).pushReplacement(
                                   MaterialPageRoute(
                                     builder: (_) => const RoundScreen(),
