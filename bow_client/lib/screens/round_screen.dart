@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 import '../state/game_controller.dart';
+import '../state/multiplayer_controller.dart';
 import '../state/player_role.dart';
 import '../theme/bow_brand.dart';
 import '../widgets/life_hearts.dart';
@@ -32,6 +33,8 @@ class _RoundScreenState extends State<RoundScreen> {
   void _scheduleGameOverNav(GameController controller) {
     if (!controller.hasWinner || _gameOverNavScheduled) return;
     _gameOverNavScheduled = true;
+    final multiplayer = context.read<MultiplayerController>();
+    multiplayer.markMatchFinished();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted) return;
       Future.delayed(const Duration(seconds: 3), () {
@@ -49,6 +52,14 @@ class _RoundScreenState extends State<RoundScreen> {
   Widget build(BuildContext context) {
     return Consumer<GameController>(
       builder: (context, controller, _) {
+        final mp = context.watch<MultiplayerController>();
+        if (mp.room != null) {
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            if (!context.mounted) return;
+            context.read<GameController>().syncOnlineSession(mp);
+          });
+        }
+
         if (controller.hasWinner) {
           _scheduleGameOverNav(controller);
         }
@@ -56,10 +67,12 @@ class _RoundScreenState extends State<RoundScreen> {
         final speaker = controller.speaker;
         final responder = controller.responder;
         final round = controller.currentRound;
-        final isResponderTurn = responder?.role == PlayerRole.responder;
+        final isLocalResponderTurn = mp.room == null
+            ? controller.isHumanResponderTurn
+            : ((responder?.id ?? '') == mp.localPlayerId);
 
         final theme = Theme.of(context);
-        final gradient = BowBrand.roundGradient(responderPhase: isResponderTurn);
+        final gradient = BowBrand.roundGradient(responderPhase: isLocalResponderTurn);
 
         return Stack(
           children: [
@@ -147,10 +160,12 @@ class _RoundScreenState extends State<RoundScreen> {
                           ],
                         ),
                         const Spacer(),
-                        if (!isResponderTurn)
-                          _speakerCard(round)
+                        if (!isLocalResponderTurn)
+                          (controller.isSoloVsBot && controller.isBotResponderTurn
+                              ? _botTurnCard(controller, round)
+                              : _speakerCard(round))
                         else
-                          _responderCard(context, round, controller, theme),
+                          _responderCard(context, round, controller, theme, mp.room != null),
                         const Spacer(),
                       ],
                     ),
@@ -394,7 +409,13 @@ class _RoundScreenState extends State<RoundScreen> {
     );
   }
 
-  Widget _responderCard(BuildContext context, round, GameController controller, ThemeData theme) {
+  Widget _responderCard(
+    BuildContext context,
+    round,
+    GameController controller,
+    ThemeData theme,
+    bool isOnline,
+  ) {
     final translation = round?.wordPair.pl ?? '—';
     final correction = round?.correctSpelling;
     return Card(
@@ -459,6 +480,7 @@ class _RoundScreenState extends State<RoundScreen> {
             ],
             TextField(
               controller: _answerController,
+              enabled: !controller.hasWinner,
               decoration: InputDecoration(
                 labelText: 'Wpisz angielski odpowiednik',
                 errorText: _error,
@@ -469,11 +491,67 @@ class _RoundScreenState extends State<RoundScreen> {
             SizedBox(
               width: double.infinity,
               child: FilledButton(
-                onPressed: () => _submit(controller),
+                onPressed: controller.hasWinner ? null : () => _submit(controller),
                 child: Text(
                   'Wyślij',
                   style: GoogleFonts.montserrat(fontWeight: FontWeight.w700),
                 ),
+              ),
+            ),
+            if (isOnline) ...[
+              const SizedBox(height: 8),
+              Text(
+                'Twoja odpowiedź zostanie wysłana do hosta.',
+                style: GoogleFonts.montserrat(
+                  fontSize: 12,
+                  color: theme.colorScheme.onSurfaceVariant,
+                ),
+              ),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _botTurnCard(GameController controller, dynamic round) {
+    final translation = round?.wordPair.pl ?? '—';
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          children: [
+            Text(
+              '${controller.botDisplayName} odpowiada…',
+              style: GoogleFonts.fredoka(
+                fontSize: 24,
+                fontWeight: FontWeight.w700,
+                color: _titleNavy,
+              ),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              'Polskie hasło:',
+              style: GoogleFonts.montserrat(
+                fontWeight: FontWeight.w700,
+                color: Colors.grey.shade700,
+              ),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              translation,
+              textAlign: TextAlign.center,
+              style: GoogleFonts.montserrat(
+                fontSize: 34,
+                fontWeight: FontWeight.w700,
+                color: Theme.of(context).colorScheme.primary,
+              ),
+            ),
+            const SizedBox(height: 18),
+            Text(
+              'Poczekaj na ruch bota.',
+              style: GoogleFonts.montserrat(
+                color: Colors.grey.shade600,
               ),
             ),
           ],

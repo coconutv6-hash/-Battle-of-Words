@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 import '../state/game_controller.dart';
+import '../state/multiplayer_controller.dart';
 import '../theme/bow_brand.dart';
 import 'waiting_room_screen.dart';
 
@@ -16,12 +17,21 @@ class LobbyScreen extends StatefulWidget {
 class _LobbyScreenState extends State<LobbyScreen> {
   final _hostController = TextEditingController(text: 'Gracz A');
   final _guestController = TextEditingController(text: 'Gracz B');
+  final _soloController = TextEditingController(text: 'Gracz');
+  final _onlineHostController = TextEditingController(text: 'Host');
+  final _joinNameController = TextEditingController(text: 'Guest');
+  final _joinCodeController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
+  final _onlineFormKey = GlobalKey<FormState>();
 
   @override
   void dispose() {
     _hostController.dispose();
     _guestController.dispose();
+    _soloController.dispose();
+    _onlineHostController.dispose();
+    _joinNameController.dispose();
+    _joinCodeController.dispose();
     super.dispose();
   }
 
@@ -99,6 +109,7 @@ class _LobbyScreenState extends State<LobbyScreen> {
   @override
   Widget build(BuildContext context) {
     final controller = context.watch<GameController>();
+    final mp = context.watch<MultiplayerController>();
 
     return Scaffold(
       body: Container(
@@ -178,7 +189,7 @@ class _LobbyScreenState extends State<LobbyScreen> {
                       const SizedBox(height: 28),
                       Text(
                         'Ustaw pseudonimy i zagraj lokalnie na jednym urządzeniu.\n'
-                        'Wkrótce: pokoje online.',
+                        'Lub stwórz pokój online i zaproś znajomego kodem.',
                         textAlign: TextAlign.center,
                         style: GoogleFonts.montserrat(
                           fontSize: 14,
@@ -186,6 +197,10 @@ class _LobbyScreenState extends State<LobbyScreen> {
                           color: Colors.white.withOpacity(0.88),
                         ),
                       ),
+                      const SizedBox(height: 24),
+                      _onlineRoomCard(mp),
+                      const SizedBox(height: 24),
+                      _soloCard(controller),
                       const SizedBox(height: 32),
                       _nameFieldRow(
                         title: 'Gracz A (host)',
@@ -220,6 +235,7 @@ class _LobbyScreenState extends State<LobbyScreen> {
                                     hostName: _hostController.text.trim(),
                                     guestName: _guestController.text.trim(),
                                   );
+                                  mp.leaveRoom();
                                   Navigator.of(context).push(
                                     MaterialPageRoute(
                                       builder: (_) => const WaitingRoomScreen(),
@@ -244,6 +260,199 @@ class _LobbyScreenState extends State<LobbyScreen> {
           ],
         ),
       ),
+    );
+  }
+
+  Widget _soloCard(GameController controller) {
+    return Container(
+      padding: const EdgeInsets.all(18),
+      decoration: BoxDecoration(
+        color: Colors.white.withValues(alpha: 0.94),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.35)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text(
+            'Solo vs Bot',
+            style: GoogleFonts.fredoka(
+              fontSize: 20,
+              fontWeight: FontWeight.w700,
+              color: const Color(0xFF1E3A8A),
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            'Ćwiczysz sam: grasz przeciwko botowi i walczysz o przetrwanie.',
+            style: GoogleFonts.montserrat(
+              fontSize: 12.5,
+              color: const Color(0xFF475569),
+            ),
+          ),
+          const SizedBox(height: 12),
+          TextFormField(
+            controller: _soloController,
+            decoration: _fieldDecoration('Twój nick'),
+            validator: _required,
+          ),
+          const SizedBox(height: 10),
+          SizedBox(
+            height: 48,
+            child: FilledButton(
+              onPressed: () {
+                final nick = _soloController.text.trim();
+                if (nick.isEmpty) return;
+                context.read<MultiplayerController>().leaveRoom();
+                controller.setupSoloVsBot(playerName: nick);
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => const WaitingRoomScreen()),
+                );
+              },
+              child: Text(
+                'Zagraj solo',
+                style: GoogleFonts.fredoka(fontWeight: FontWeight.w700),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _onlineRoomCard(MultiplayerController mp) {
+    return Container(
+      padding: const EdgeInsets.all(18),
+      decoration: BoxDecoration(
+        color: Colors.white.withValues(alpha: 0.94),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.35)),
+      ),
+      child: Form(
+        key: _onlineFormKey,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text(
+              'Online multiplayer (MVP)',
+              style: GoogleFonts.fredoka(
+                fontSize: 20,
+                fontWeight: FontWeight.w700,
+                color: const Color(0xFF1E3A8A),
+              ),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              mp.isAvailable
+                  ? 'Host tworzy pokój i wysyła kod. Drugi gracz dołącza po kodzie.'
+                  : 'Tryb online wymaga konfiguracji SUPABASE_URL i SUPABASE_ANON_KEY.',
+              style: GoogleFonts.montserrat(
+                fontSize: 12.5,
+                color: const Color(0xFF475569),
+              ),
+            ),
+            if (mp.error != null) ...[
+              const SizedBox(height: 10),
+              Text(
+                mp.error!,
+                style: GoogleFonts.montserrat(
+                  color: const Color(0xFFB91C1C),
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ],
+            const SizedBox(height: 14),
+            TextFormField(
+              controller: _onlineHostController,
+              enabled: mp.isAvailable && !mp.isBusy,
+              decoration: _fieldDecoration('Twoja nazwa (host)'),
+              validator: _required,
+            ),
+            const SizedBox(height: 10),
+            SizedBox(
+              height: 48,
+              child: FilledButton(
+                onPressed: mp.isAvailable && !mp.isBusy
+                    ? () => _createOnlineRoom(mp)
+                    : null,
+                child: Text(
+                  'Stwórz pokój online',
+                  style: GoogleFonts.fredoka(fontWeight: FontWeight.w700),
+                ),
+              ),
+            ),
+            const SizedBox(height: 14),
+            Row(
+              children: [
+                Expanded(
+                  child: TextFormField(
+                    controller: _joinNameController,
+                    enabled: mp.isAvailable && !mp.isBusy,
+                    decoration: _fieldDecoration('Twoja nazwa (guest)'),
+                    validator: _required,
+                  ),
+                ),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: TextFormField(
+                    controller: _joinCodeController,
+                    enabled: mp.isAvailable && !mp.isBusy,
+                    textCapitalization: TextCapitalization.characters,
+                    decoration: _fieldDecoration('Kod pokoju'),
+                    validator: (v) {
+                      if (v == null || v.trim().isEmpty) return 'Podaj kod';
+                      if (v.trim().length < 6) return 'Min. 6 znaków';
+                      return null;
+                    },
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 10),
+            SizedBox(
+              height: 48,
+              child: OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  side: const BorderSide(color: Color(0xFF1E3A8A), width: 1.5),
+                ),
+                onPressed: mp.isAvailable && !mp.isBusy
+                    ? () => _joinOnlineRoom(mp)
+                    : null,
+                child: Text(
+                  'Dołącz po kodzie',
+                  style: GoogleFonts.fredoka(
+                    fontWeight: FontWeight.w700,
+                    color: const Color(0xFF1E3A8A),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Future<void> _createOnlineRoom(MultiplayerController mp) async {
+    final valid = _onlineFormKey.currentState?.validate() ?? false;
+    if (!valid) return;
+    final ok = await mp.createRoom(hostName: _onlineHostController.text.trim());
+    if (!mounted || !ok) return;
+    Navigator.of(context).push(
+      MaterialPageRoute(builder: (_) => const WaitingRoomScreen()),
+    );
+  }
+
+  Future<void> _joinOnlineRoom(MultiplayerController mp) async {
+    final valid = _onlineFormKey.currentState?.validate() ?? false;
+    if (!valid) return;
+    final ok = await mp.joinRoom(
+      roomCode: _joinCodeController.text.trim(),
+      guestName: _joinNameController.text.trim(),
+    );
+    if (!mounted || !ok) return;
+    Navigator.of(context).push(
+      MaterialPageRoute(builder: (_) => const WaitingRoomScreen()),
     );
   }
 

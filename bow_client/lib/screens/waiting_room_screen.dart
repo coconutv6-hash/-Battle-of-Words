@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 import '../state/game_controller.dart';
+import '../state/multiplayer_controller.dart';
 import '../theme/bow_brand.dart';
 import 'round_screen.dart';
 
@@ -12,8 +13,30 @@ class WaitingRoomScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = context.watch<GameController>();
-    final host = controller.host;
-    final guest = controller.guest;
+    final mp = context.watch<MultiplayerController>();
+    final room = mp.room;
+    final isOnlineRoom = room != null;
+    final isSolo = !isOnlineRoom && controller.isSoloVsBot;
+    final hostName = isOnlineRoom ? room.hostName : controller.host?.displayName;
+    final guestName = isOnlineRoom ? room.guestName : controller.guest?.displayName;
+
+    if (isOnlineRoom) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (!context.mounted) return;
+        context.read<GameController>().syncOnlineSession(mp);
+      });
+    }
+
+    if (isOnlineRoom && room.isPlaying) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (!context.mounted) return;
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(
+            builder: (_) => const RoundScreen(),
+          ),
+        );
+      });
+    }
 
     return Scaffold(
       body: Container(
@@ -39,21 +62,38 @@ class WaitingRoomScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  'Obie osoby są gotowe? Startujecie rundę.',
+                  isOnlineRoom
+                      ? 'Kod pokoju: ${room.roomCode}. Host startuje mecz gdy guest dołączy.'
+                      : (isSolo
+                          ? 'Tryb solo: grasz przeciwko botowi. Startuj i walcz o zwycięstwo.'
+                          : 'Obie osoby są gotowe? Startujecie rundę.'),
                   style: GoogleFonts.montserrat(
                     fontSize: 14,
                     color: Colors.white.withOpacity(0.88),
                   ),
                 ),
+                if (isOnlineRoom) ...[
+                  const SizedBox(height: 10),
+                  Text(
+                    'Status: ${room.status}',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white.withOpacity(0.92),
+                    ),
+                  ),
+                ],
                 const SizedBox(height: 28),
                 _playerCard(
-                  name: host?.displayName ?? '—',
+                  name: hostName ?? '—',
                   subtitle: 'Host · zaczyna jako speaker',
                 ),
                 const SizedBox(height: 14),
                 _playerCard(
-                  name: guest?.displayName ?? '—',
-                  subtitle: 'Gość · zaczyna jako responder',
+                  name: guestName ?? 'Oczekiwanie na gracza...',
+                  subtitle: isOnlineRoom
+                      ? 'Gość · dołącza po kodzie pokoju'
+                      : (isSolo ? 'Bot · zaczyna jako responder' : 'Gość · zaczyna jako responder'),
                 ),
                 const Spacer(),
                 SizedBox(
@@ -67,19 +107,23 @@ class WaitingRoomScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(18),
                       ),
                     ),
-                    onPressed: controller.ready
-                        ? () {
-                            controller.startMatch();
-                            Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                builder: (_) => const RoundScreen(),
-                              ),
-                            );
-                          }
-                        : null,
+                    onPressed: isOnlineRoom
+                        ? (mp.canStartMatch ? () => mp.startMatch() : null)
+                        : (controller.ready
+                            ? () {
+                                controller.startMatch();
+                                Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                    builder: (_) => const RoundScreen(),
+                                  ),
+                                );
+                              }
+                            : null),
                     icon: const Icon(Icons.play_arrow_rounded, size: 28),
                     label: Text(
-                      'Start rundy',
+                      isOnlineRoom
+                          ? (mp.isHost ? 'Start meczu online' : 'Czekaj na hosta')
+                          : (isSolo ? 'Start solo vs bot' : 'Start rundy'),
                       style: GoogleFonts.fredoka(
                         fontSize: 18,
                         fontWeight: FontWeight.w700,
@@ -88,6 +132,25 @@ class WaitingRoomScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 16),
+                if (isOnlineRoom)
+                  SizedBox(
+                    height: 46,
+                    child: OutlinedButton(
+                      style: OutlinedButton.styleFrom(
+                        foregroundColor: Colors.white,
+                        side: const BorderSide(color: Colors.white, width: 1.8),
+                      ),
+                      onPressed: () {
+                        mp.leaveRoom();
+                        Navigator.of(context).pop();
+                      },
+                      child: Text(
+                        'Wyjdź z pokoju',
+                        style: GoogleFonts.fredoka(fontWeight: FontWeight.w700),
+                      ),
+                    ),
+                  ),
+                if (isOnlineRoom) const SizedBox(height: 16),
               ],
             ),
           ),

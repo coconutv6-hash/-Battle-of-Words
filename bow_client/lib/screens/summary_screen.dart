@@ -5,9 +5,11 @@ import 'package:provider/provider.dart';
 import '../models/match_mistake.dart';
 import '../models/player.dart';
 import '../state/game_controller.dart';
+import '../state/multiplayer_controller.dart';
 import '../theme/bow_brand.dart';
 import 'lobby_screen.dart';
 import 'round_screen.dart';
+import 'waiting_room_screen.dart';
 
 class SummaryScreen extends StatelessWidget {
   const SummaryScreen({super.key});
@@ -15,6 +17,8 @@ class SummaryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = context.watch<GameController>();
+    final mp = context.watch<MultiplayerController>();
+    final isOnlineMatch = mp.room != null;
     final winner = controller.winner;
     final host = controller.host;
     final guest = controller.guest;
@@ -138,13 +142,23 @@ class SummaryScreen extends StatelessWidget {
                           ),
                         ),
                         onPressed: () {
-                          controller.rematch();
-                          Navigator.of(context).pushReplacement(
-                            MaterialPageRoute(builder: (_) => const RoundScreen()),
-                          );
+                          if (isOnlineMatch) {
+                            controller.reset();
+                            Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(builder: (_) => const WaitingRoomScreen()),
+                            );
+                            if (mp.isHost && mp.hasGuest) {
+                              mp.startMatch();
+                            }
+                          } else {
+                            controller.rematch();
+                            Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(builder: (_) => const RoundScreen()),
+                            );
+                          }
                         },
                         child: Text(
-                          'Rewanż',
+                          isOnlineMatch ? 'Nowy mecz w pokoju' : 'Rewanż',
                           style: GoogleFonts.fredoka(
                             fontWeight: FontWeight.w700,
                             fontSize: 16,
@@ -165,6 +179,9 @@ class SummaryScreen extends StatelessWidget {
                         ),
                         onPressed: () {
                           controller.reset();
+                          if (isOnlineMatch) {
+                            mp.leaveRoom();
+                          }
                           Navigator.of(context).pushAndRemoveUntil(
                             MaterialPageRoute(builder: (_) => const LobbyScreen()),
                             (route) => false,
