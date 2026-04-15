@@ -332,7 +332,14 @@ class GameController extends ChangeNotifier {
     if (remaining <= 450) return;
 
     final planned = 900 + _random.nextInt(1400);
-    final delayMs = planned.clamp(400, max(450, remaining - 250));
+    final upperBound = max(450, remaining - 250);
+    var delayMs = planned;
+    if (delayMs < 400) {
+      delayMs = 400;
+    }
+    if (delayMs > upperBound) {
+      delayMs = upperBound;
+    }
     _botMoveTimer = Timer(Duration(milliseconds: delayMs), () {
       if (currentRound != round || winner != null) return;
       final expected = round.wordPair.en;
